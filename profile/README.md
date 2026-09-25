@@ -21,3 +21,8 @@ at https://a-tiny-project.github.io/
 All work, unless otherwise specified, is licensed under AGPL v3.0 
 (which, as is abundantly clear, is mostly symbolic these days 
 -- but we hope it warms the hearts of a few)
+
+## Note on childlike play
+
+We like to have a bit of fun with our software: we hope you find a bit of playful chaos 
+in some of our releases. In the words of _The Little Schemer_, bon appetit!
