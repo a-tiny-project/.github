@@ -17,3 +17,6 @@ for their open access computing devices, without having to reinvent the universe
 
 If you find our work useful, you might cite the project from the citation key
 at https://a-tiny-project.github.io/
+
+All work is licensed under AGPL v3.0 (which, as is abundantly clear, is mostly symbolic these days 
+-- but we hope it warms the heart of a few)
