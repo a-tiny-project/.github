@@ -26,6 +26,17 @@ All work, unless otherwise specified, is licensed under AGPL v3.0
 (which, as is abundantly clear, is mostly symbolic these days 
 -- but we hope it warms the hearts of a few)
 
+If the idea of this project proves valuable, we fully expect people to reverse 
+engineer or clean room reconstruct things they want. We've done the exact same here!
+There are countless projects that we've drawn upon (and we collect and propagate
+their licensing, and maintain references and commentary on influences in the READMEs
+throughout our systems).
+
+We can't really stop people going wild with agents. That's fine: use this project if you feel
+like you can trust the contributors here to steer the agentic traces in good directions
+(or, rather, if you grow to trust the agentic traces which are curated from our factory,
+and context ... which we purposefully keep behind the scenes).
+
 ## Note on childlike play
 
 We like to have a bit of fun with our software: we hope you find a bit of playful chaos 
