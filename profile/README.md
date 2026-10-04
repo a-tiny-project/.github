@@ -16,7 +16,7 @@ This project does not seek to hide that, *it is the entire point of the project*
 
 We dream of a world where users can quickly spin up customized high-performance software
 for their open access computing devices, without having to reinvent the universe
-(indeed, *this project* might serve as such a universe).
+(indeed, *this project* might serve as such a universe, or as source for your own universe).
 
 If you find our work useful, you might cite the project from the citation key
 at https://a-tiny-project.github.io/
