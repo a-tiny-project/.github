@@ -21,6 +21,20 @@ for their open access computing devices, without having to reinvent the universe
 If you find our work useful, you might cite the project from the citation key
 at https://a-tiny-project.github.io/
 
+## Comments on software and agents
+
+Agents are now capable enough to allow anyone to rapidly spin up new software. This is awesome!
+Software deserves to be democratized! Assume that anyone can write any piece of software, what
+is the value of the software produced by a project such as this?
+
+Answering this question is analogous, in many ways, to the existential crisis confronting mathematics.
+In general, anyone can spin up a piece of software ... but not everyone can do it _well_. At least for
+today's agents, what you get out _remains_ a function of what you put in. Sometimes you want someone
+who is motivated to carefully understand what they are doing at the helm ... a.k.a someone 
+who is in it _for the love of the game_.
+
+We love the game, and want to understand it!
+
 ## Licensing
 
 All work, unless otherwise specified, is licensed under AGPL v3.0 
