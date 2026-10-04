@@ -59,9 +59,7 @@ their licensing, and maintain references and commentary on influences in the REA
 throughout our systems).
 
 We can't really stop people going wild with agents. That's fine: use this project if you feel
-like you can trust the contributors here to steer the agentic traces in good directions
-(or, rather, if you grow to trust the agentic traces which are curated from our factory,
-and context ... which we purposefully keep behind the scenes).
+like you can trust the contributors here to steer the agentic traces in good directions.
 
 ## Note on childlike play
 
