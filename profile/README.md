@@ -28,12 +28,16 @@ Software deserves to be democratized! Assume that anyone can write any piece of 
 is the value of the software produced by a project such as this?
 
 Answering this question is analogous, in many ways, to the existential crisis confronting mathematics.
-In general, anyone can spin up a piece of software ... but not everyone can do it _well_. At least for
-today's agents, what you get out _remains_ a function of what you put in. Sometimes you want someone
+In general, anyone can spin up a piece of software ... but not everyone can do it _well_.
+
+At least for
+today's agents, what you get out _remains_ a function of what you put in. Here, 
+we (and presumably also you) want someone
 who is motivated to carefully understand what they are doing at the helm ... a.k.a someone 
-who is in it _for the love of the game_.
+who is in it _for the love of the game_ (the game in this case is some combination of PL and systems, etc).
 
 We love the game, and want to understand it!
+We’re also interested in the idea that we might teach agents “the game” (can you teach agents good PL / systems design?)
 
 ## Licensing
 
