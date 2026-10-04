@@ -41,6 +41,11 @@ who is in it _for the love of the game_ (the game in this case is some combinati
 We love the game, and want to understand it!
 We’re also interested in the idea that we might teach agents “the game” (can you teach agents good PL / systems design?)
 
+At the end of the day, we enjoy fast
+programmable software, and wish to see
+more of it in the world. This endeavor
+seems worthy of our tokens.
+
 ## Licensing
 
 All work, unless otherwise specified, is licensed under AGPL v3.0 
