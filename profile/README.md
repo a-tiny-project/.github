@@ -1,6 +1,7 @@
 # a tiny project
 
 This project is an experiment in large-scale engineering with language model (LM) agents. 
+
 It serves two purposes. 
 
 - The first is as an experiment, testing the hypothesis that agents can be coerced
