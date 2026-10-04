@@ -30,6 +30,8 @@ is the value of the software produced by a project such as this?
 Answering this question is analogous, in many ways, to the existential crisis confronting mathematics.
 In general, anyone can spin up a piece of software ... but not everyone can do it _well_.
 
+(whether you want “well” depends drastically on what you’re doing, of course!)
+
 At least for
 today's agents, what you get out _remains_ a function of what you put in. Here, 
 we (and presumably also you) want someone
