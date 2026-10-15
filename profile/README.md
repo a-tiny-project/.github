@@ -98,9 +98,11 @@ programming strategies.
 
 This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
 human can keep up with the loop, and steer it, as the loop scales ... because otherwise wtf are we doing? 
+
 RSI (and the systems its proponents seem to propose that we consider) offers that we take the role
 of observers on some inscrutable agentic execution trace into the future, 
 whose goals we don't understand (the _acceleration_ is just too large for us to keep up).
+
 In other words, we become passengers in an evolving world which we can no longer meaningfully
 contribute to, deferring all questions and their answers to a magic box in the sky.
 Okay, we ask, bluntly: who the fuck would want this?
@@ -117,7 +119,8 @@ which is exactly aligned with my goals (which, by the way, I don't even know ver
 accomplish them at increasingly fast speeds. Of course, individual alignment with a sufficiently powerful
 autonomous system is dangerous, and so labs are also concerned with "global" alignment and safeguards.
 
-(RSI _as a scientific endeavor_ is perfectly acceptable, but we all know that RSI is not just a scientific endeavor ...)
+(RSI _as a scientific endeavor_ is perfectly acceptable, but we all know that RSI is not just a scientific 
+endeavor ... but one motivated extremely by the philosophy of capital)
 
 ### The search for interaction models which scale well
 
