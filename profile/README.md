@@ -124,7 +124,24 @@ endeavor ... but one motivated extremely by the philosophy of capital)
 
 ### The search for interaction models which scale well
 
-Back to humans. How do we keep up? The answer depends on what the human reads. An agent's raw chat (every message, tool call, and edit) quickly exceeds what a human can read. If the agent reports its work as checkpoints, at a high level and in a language a human can read, the same work fits in a few messages.
+Back to humans. How do we keep up? 
+
+The answer depends entirely on the physical realities of being a human, and our cognitive capabilities. 
+In other words, what makes us ... us. These are often framed as limitations. 
+They are not limitations: we instead view these
+as design constraints that lead to elegant and minimal solutions.
+Our "limitations" are required to allow us to perceive the beauty and elegance in things.
+
+More directly, humans will continue to interact with agents in some capacity, and let's say we
+want humans to keep up:
+an agent's raw chat (every message, tool call, and edit) quickly exceeds what a human can read. 
+
+An _interaction model_ is a system with forms of presentation and interfaces for expressing desires. 
+For instance, as a _form of presentation_, if the agent reports its work as checkpoints at a slightly abstracted 
+level of detail (avoiding, say, the details of orchestration, or intermediate tools calls) and in a language a 
+human can read, a large amount of work may fit into a few messages.
+
+Designing effective interaction models seems to be of the utmost importance.
 
 <p align="center">
   <img src="figures/reading.svg" alt="A human reading a language model agent's raw chat falls behind after two of six leaps. When the agent reports checkpoints in a language a human can read, three messages cover all six leaps" width="720" />
