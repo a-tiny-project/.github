@@ -86,6 +86,8 @@ of observers on some inscrutable agentic execution trace into the future, whose 
 
 (RSI _as a scientific endeavor_ is perfectly acceptable, but we all know that RSI is not just a scientific endeavor ...)
 
+### The search for interaction models which scale well
+
 Back to humans. How do we keep up? The answer depends on what the human reads. An agent's raw chat (every message, tool call, and edit) quickly exceeds what a human can read. If the agent reports its work as checkpoints, at a high level and in a language a human can read, the same work fits in a few messages.
 
 <p align="center">
@@ -111,6 +113,8 @@ Suppose that the steering itself is trained into the weights, as preference trai
 _With the steering trained into the weights, the agent takes twelve smooth leaps in both rows. In the top row, the soft red area of what the human understands covers only the first leap. Past the first goal, the agent sets its own goals (teal rings and arrows) every three leaps along its current direction, and its last leap runs out of the frame. In the bottom row, the soft red area covers all of the work, and the human chooses each next goal (red arrows to ink rings)._
 
 Two further figures, on how the harness prunes a single step and how the checkpoints of one run become building blocks for the next, are on [a separate page](https://github.com/a-tiny-project/.github/blob/main/profile/figures.md).
+
+### The ultimate goal
 
 At the end of the day, we enjoy fast
 programmable software, and wish to see
