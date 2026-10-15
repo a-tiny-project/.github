@@ -64,7 +64,7 @@ using human preference data, toward what people generally want from software. Of
 computably represent the preferences which induce this space, they'd use that too and we'd all be happy. Perhaps that will happen in 2026 and we can shut this project down,
 and live in a utopia of good PL design.
 
-... but in the mean time, all of this training happens before the model encounters _our project_ and _our concerns_, so it cannot account for them entirely from training. 
+... but in the meantime, all of this training happens before the model encounters _our project_ and _our concerns_, so it cannot account for them entirely from training. 
 We program it after training through the _harness_ (the tools, tests, context, and languages around the model), which a human can read and change.
 
 <p align="center">
@@ -80,7 +80,7 @@ The [Mismanaged Geniuses Hypothesis](https://alexzhang13.github.io/blog/2026/mgh
 programmability to increase the set of tasks it can solve using decomposition). We strongly align with the intuitions
 behind this hypothesis for harness design (and, of course, training agentic LMs within harnesses).
 
-On the other hand, there's this term "recursive self improvement". This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
+On the other hand, there's this term "recursive self-improvement". This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
 human can keep up with the loop, and steer it, as the loop scales ... because otherwise wtf are we doing? RSI seems to ask that we take the role
 of observers on some inscrutable agentic execution trace into the future, whose goals we don't understand. Okay, who the fuck would want this? Weirdos.
 
