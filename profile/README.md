@@ -141,7 +141,8 @@ For instance, as a _form of presentation_, if the agent reports its work as chec
 level of detail (avoiding, say, the details of orchestration, or intermediate tools calls) and in a language a 
 human can read, a large amount of work may fit into a few messages.
 
-Designing effective interaction models seems to be of the utmost importance.
+Designing effective interaction models seems to be of the utmost importance ... this is _not going to change_
+as long as our biology and cognitive make up are fixed.
 
 <p align="center">
   <img src="figures/reading.svg" alt="A human reading a language model agent's raw chat falls behind after two of six leaps. When the agent reports checkpoints in a language a human can read, three messages cover all six leaps" width="720" />
