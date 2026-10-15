@@ -41,17 +41,31 @@ who is in it _for the love of the game_ (the game in this case is some combinati
 We love the game, and want to understand it!
 We’re also interested in the idea that we might teach agents “the game” (can you teach agents good PL / systems design?)
 
-Programming with agents involves programming a search process. Inside the large space of software that runs sits a region, let's call it "good software": this is software aligned with very human concerns (performance, compositional design, programmability, and so on). Our question is simple -- how do we program the agent search process to find / prefer this space?
+### Agents are programmable search processes
 
-A human programmer searches in small steps. An agent (a language model working in a loop with tools) takes much longer steps, which we call _leaps_. At any point in the search, the agent has many possible next steps, some more likely than others. We draw this _distribution of next steps_ as a jagged teal ball, and each leap as one draw from it.
+Programming with agents involves programming a search process. Inside the large space of software that runs sits a region (our region of concern in this project), 
+let's call it "good software": this is software aligned with very human concerns (performance, compositional design, programmability, and so on). If you don't
+care about this, that's fine, but we do (people care about a lot of weird things), so we're going to talk about it.
+
+Our question is simple -- how do we program the agent search process to find / prefer this space?
+
+A human programmer searches in small steps. An agent (a language model working in a loop with tools) takes longer (and more frequent!) steps, which we call _leaps_. 
+At any point in the search, the agent has many possible next steps, some more likely than others. 
+We draw this _distribution of next steps_ as a jagged teal ball, and each leap as one draw from it.
 
 <p align="center">
   <img src="figures/search.svg" alt="A human searches in small steps. A language model agent leaps into software that runs, outside good software. A human at the helm keeps its path smooth only for the leaps they can read" width="720" />
 </p>
 
-_On its own (center), the agent (teal) ends in software that runs (dashed region), outside the ring of good software. A human (red) has a budget of six small steps, and reading one leap costs three. At the helm (right), the human reads the first two leaps. At each, the human accepts the draw that keeps the path's direction (red rings) over a longer one that turns away. Past the second leap, the path turns sharply and zigzags._
+_On its own (center), the agent (teal) often ends in software that runs (dashed region), but perhaps not inside the ring of good software. A human (red) has a budget of six small steps, and reading one leap costs three. At the helm (right), the human reads the first two leaps. At each, the human accepts the draw that keeps the path's direction (red rings) over a longer one that turns away. Past the second leap, the path turns sharply and zigzags._
 
-Frontier labs program part of the agent's search into the model's weights, through pretraining, fine-tuning, and reinforcement learning. They train toward software that runs and, using human preference data, toward what people generally want from software. This training happens before the model encounters our project, so it cannot account for our particular concerns. We program the rest through the _harness_ (the tools, tests, context, and languages around the model), which a human can read and change.
+Frontier labs program part of the agent's search into the model's weights, through pretraining, fine-tuning, and reinforcement learning. They train toward software that runs and, 
+using human preference data, toward what people generally want from software. Of course they want good software, and if there was an RL environment that could 
+computably represent the preferences which induce this space, they'd use that too and we'd all be happy. Perhaps that will happen in 2026 and we can shut this project down,
+and live in a utopia of good PL design.
+
+... but in the mean time, all of this training happens before the model encounters _our project_ and _our concerns_, so it cannot account for them entirely from training. 
+We program it after training through the _harness_ (the tools, tests, context, and languages around the model), which a human can read and change.
 
 <p align="center">
   <img src="figures/shaping.svg" alt="Training at frontier labs stretches a language model agent's distribution of next steps into software that runs. A harness a human can read bends it toward good software" width="720" />
@@ -59,7 +73,20 @@ Frontier labs program part of the agent's search into the model's weights, throu
 
 _Training moves the distribution's mass from a dense core (pretraining) out along progressively longer spikes (fine-tuning and reinforcement learning). The longest spikes end in software that runs, all to one side of good software. In the harness (right), types, tests, and benchmarks act as walls (shaded) that remove the steps they rule out, and a plan held by a human (faint red band) bends one spike toward good software._
 
-The [Mismanaged Geniuses Hypothesis](https://alexzhang13.github.io/blog/2026/mgh/) proposes training models to decompose and manage their own work, and identifies the language in which those decompositions are expressed as a key factor in its success. We ask whether a human can keep up with the loop, and steer it, as the loop scales. The answer depends on what the human reads. An agent's raw chat (every message, tool call, and edit) quickly exceeds what a human can read. If the agent reports its work as checkpoints, at a high level and in a language a human can read, the same work fits in a few messages.
+### Agents programming themselves
+
+The [Mismanaged Geniuses Hypothesis](https://alexzhang13.github.io/blog/2026/mgh/) proposes training models to decompose and manage their own work 
+(essentially: can we design harnesses that get out of the way ... programmable in such a way that the agent can use the 
+programmability to increase the set of tasks it can solve using decomposition). We strongly align with the intuitions
+behind this hypothesis for harness design (and, of course, training agentic LMs within harnesses).
+
+On the other hand, there's this term "recursive self improvement". This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
+human can keep up with the loop, and steer it, as the loop scales ... because otherwise wtf are we doing? RSI seems to ask that we take the role
+of observers on some inscrutable agentic execution trace into the future, whose goals we don't understand. Okay, who the fuck would want this? Weirdos.
+
+(RSI _as a scientific endeavor_ is perfectly acceptable, but we all know that RSI is not just a scientific endeavor ...)
+
+Back to humans. How do we keep up? The answer depends on what the human reads. An agent's raw chat (every message, tool call, and edit) quickly exceeds what a human can read. If the agent reports its work as checkpoints, at a high level and in a language a human can read, the same work fits in a few messages.
 
 <p align="center">
   <img src="figures/reading.svg" alt="A human reading a language model agent's raw chat falls behind after two of six leaps. When the agent reports checkpoints in a language a human can read, three messages cover all six leaps" width="720" />
