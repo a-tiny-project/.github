@@ -90,7 +90,7 @@ This rests on a simple premise:
 _if you remove yourself from the loop, you can no longer verify that the thing is what you wanted_
 
 There are degrees of verification, and the programming of the space of strategies for verification is,
-of course, a great concern. But at the very least: we want humans in the ring, verifying, thinking, etc!
+of course, a great concern. But at the very least: we want humans in the ring, verifying, thinking, etc.!
 
 To draw the contrast, there's this term "recursive self-improvement". This term seems to 
 apply to _agentic LMs training agentic LMs_, but the term has also been commandeered a bit to refer to harness
@@ -138,11 +138,11 @@ an agent's raw chat (every message, tool call, and edit) quickly exceeds what a 
 
 An _interaction model_ is a system with forms of presentation and interfaces for expressing desires. 
 For instance, as a _form of presentation_, if the agent reports its work as checkpoints at a slightly abstracted 
-level of detail (avoiding, say, the details of orchestration, or intermediate tools calls) and in a language a 
+level of detail (avoiding, say, the details of orchestration, or intermediate tool calls) and in a language a 
 human can read, a large amount of work may fit into a few messages.
 
 Designing effective interaction models seems to be of the utmost importance ... this is _not going to change_
-as long as our biology and cognitive make up are fixed.
+as long as our biology and cognitive makeup are fixed.
 
 <p align="center">
   <img src="figures/reading.svg" alt="A human reading a language model agent's raw chat falls behind after two of six leaps. When the agent reports checkpoints in a language a human can read, three messages cover all six leaps" width="720" />
