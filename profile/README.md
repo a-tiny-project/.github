@@ -76,13 +76,46 @@ _Training moves the distribution's mass from a dense core (pretraining) out alon
 ### Agents programming themselves
 
 The [Mismanaged Geniuses Hypothesis](https://alexzhang13.github.io/blog/2026/mgh/) proposes training models to decompose and manage their own work 
-(essentially: can we design harnesses that get out of the way ... programmable in such a way that the agent can use the 
-programmability to increase the set of tasks it can solve using decomposition). We strongly align with the intuitions
-behind this hypothesis for harness design (and, of course, training agentic LMs within harnesses).
+(essentially: can we design harnesses that get out of the way ... programmable in such a way that the 
+agent can use the 
+programmability to increase the set of tasks it can solve using decomposition). 
+We strongly align with the intuitions
+behind this hypothesis for harness design (and, of course, training agentic LMs within harnesses) 
+inasmuch as _humans are kept in the loop_. This is counter to the dominant narratives in
+agents, which, in extreme forms, seek to remove humans from the loop. 
+We want humans (yes, often multiple, as part
+of great organizations that do great work) in the loop. Agents can be right there as well, of course!
 
-On the other hand, there's this term "recursive self-improvement". This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
-human can keep up with the loop, and steer it, as the loop scales ... because otherwise wtf are we doing? RSI seems to ask that we take the role
-of observers on some inscrutable agentic execution trace into the future, whose goals we don't understand. Okay, who the fuck would want this? Weirdos.
+This rests on a simple premise:
+_if you remove yourself from the loop, you can no longer verify that the thing is what you wanted_
+
+There are degrees of verification, and the programming of the space of strategies for verification is,
+of course, a great concern. But at the very least: we want humans in the ring, verifying, thinking, etc!
+
+To draw the contrast, there's this term "recursive self-improvement". This term seems to 
+apply to _agentic LMs training agentic LMs_, but the term has also been commandeered a bit to refer to harness
+programming strategies.
+
+This term doesn't make much sense to us: we're concerned with humans: we ask whether a 
+human can keep up with the loop, and steer it, as the loop scales ... because otherwise wtf are we doing? 
+RSI (and the systems its proponents seem to propose that we consider) offers that we take the role
+of observers on some inscrutable agentic execution trace into the future, 
+whose goals we don't understand (the _acceleration_ is just too large for us to keep up).
+In other words, we become passengers in an evolving world which we can no longer meaningfully
+contribute to, deferring all questions and their answers to a magic box in the sky.
+Okay, we ask, bluntly: who the fuck would want this?
+Apparently, a religion is indeed a viable business strategy.
+
+The most charitable interpretation of RSI as "only" leading to agents of increasingly
+more degrees of _helpfulness_ seems to require a nearly complete solution to the question of alignment.
+
+Alignment, of course,
+has many levels -- but we're mostly concerned with "individual" alignment (tools and systems that
+work well for the individual, furthering them towards their goals). 
+Perfect individual alignment seems to be: a system
+which is exactly aligned with my goals (which, by the way, I don't even know very well) but can
+accomplish them at increasingly fast speeds. Of course, individual alignment with a sufficiently powerful
+autonomous system is dangerous, and so labs are also concerned with "global" alignment and safeguards.
 
 (RSI _as a scientific endeavor_ is perfectly acceptable, but we all know that RSI is not just a scientific endeavor ...)
 
