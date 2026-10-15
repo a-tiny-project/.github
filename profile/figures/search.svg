@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 212" role="img" aria-labelledby="t d">
+<title id="t">A human searches in small steps. A language model agent leaps into software that runs, outside good software. A human at the helm keeps its path smooth only for the leaps they can read</title>
+<desc id="d">Three panels share a start point (dot), a dashed region of software that runs, and a ring inside it marking the goal, good software. A human takes six small round steps, each with a dot, along a smooth curve toward the goal and covers a short way. A dashed arrow points on toward the goal. A language model agent takes six leaps. At each step a jagged ball, pale at its center with its mass out along its spikes, shows the distribution of next steps that the language model and its harness induce. Each leap is one draw from it, landing at the far end of its longest spike. The agent lands inside the region that runs and misses the goal. With a human at the helm, checking one leap costs the human three round steps, so the human's six steps cover two leaps. For each of those two the human picks the spike that holds the heading toward the goal (red rings) over a longer one that veers off, so each leap makes more progress toward the goal and the path runs smooth. The agent takes its other four leaps alone: the path turns sharply at the first of them, zigzags, and lands in the region that runs, away from the goal.</desc>
+<style>
+.h{font:15px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#1a1714}
+.frame{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.rule{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.hball{fill:#d2371f;fill-opacity:0.10;stroke:#d2371f;stroke-opacity:0.6;stroke-width:1}
+.hpath{fill:none;stroke:#d2371f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.route{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 5;stroke-linecap:round;stroke-opacity:0.8}
+.aball{fill:#11767a;fill-opacity:0.09;stroke:#11767a;stroke-opacity:0.75;stroke-width:1;stroke-linejoin:round}
+.adens{stroke-width:1;stroke-linejoin:round}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#11767a}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.08}.df3{stop-opacity:0}
+.de0{stop-opacity:0.80}.de1{stop-opacity:0.44}.de2{stop-opacity:0.05}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#11767a}
+.dm0{stop-opacity:0.22}.dm1{stop-opacity:0.18}.dm2{stop-opacity:0.13}.dm3{stop-opacity:0.04}
+.dme0{stop-opacity:0.62}.dme1{stop-opacity:0.55}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.07}.da1{stop-opacity:0.10}.da2{stop-opacity:0.30}.da3{stop-opacity:0.46}.da4{stop-opacity:0.40}
+.dae0{stop-opacity:0.34}.dae1{stop-opacity:0.46}.dae2{stop-opacity:0.88}.dae3{stop-opacity:0.84}
+.apath{fill:none;stroke:#11767a;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.adot{fill:#11767a}
+.start{fill:#1a1714}
+.goal{fill:none;stroke:#1a1714;stroke-width:1.4}
+.goaldot{fill:#1a1714}
+.t{font:14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.ti{font:italic 14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.hdot{fill:#d2371f}
+.pick{fill:none;stroke:#d2371f;stroke-width:1.5}
+.aim{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 4;stroke-linecap:round}
+.aimhead{fill:#d2371f}
+.runs{fill:rgba(26,23,20,0.035);stroke:rgba(26,23,20,0.45);stroke-width:1;stroke-dasharray:3 3}
+@media (prefers-color-scheme: dark){
+.h{fill:#ece3d2}
+.frame,.rule{stroke:rgba(236,227,210,0.28)}
+.hball{fill:#fe5a44;stroke:#fe5a44;fill-opacity:0.14}
+.hpath,.route{stroke:#fe5a44}
+.aball{fill:#3fb8b8;stroke:#3fb8b8;fill-opacity:0.11}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#3fb8b8}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.09}
+.de0{stop-opacity:0.76}.de1{stop-opacity:0.42}.de2{stop-opacity:0.06}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#3fb8b8}
+.dm0{stop-opacity:0.24}.dm1{stop-opacity:0.20}.dm2{stop-opacity:0.15}.dm3{stop-opacity:0.05}
+.dme0{stop-opacity:0.58}.dme1{stop-opacity:0.52}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.08}.da1{stop-opacity:0.12}.da2{stop-opacity:0.32}.da3{stop-opacity:0.48}.da4{stop-opacity:0.42}
+.dae0{stop-opacity:0.32}.dae1{stop-opacity:0.44}.dae2{stop-opacity:0.85}.dae3{stop-opacity:0.80}
+.apath{stroke:#3fb8b8}
+.adot{fill:#3fb8b8}
+.start,.goaldot{fill:#ece3d2}
+.goal{stroke:#ece3d2}
+.t,.ti{fill:#b0a692}
+.hdot,.aimhead{fill:#fe5a44}
+.pick,.aim{stroke:#fe5a44}
+.runs{fill:rgba(236,227,210,0.04);stroke:rgba(236,227,210,0.42)}
+}
+</style>
+<text class="h" x="112" y="20" text-anchor="middle">a human</text>
+<g transform="translate(0,34)">
+<rect class="frame" x="0.5" y="0.5" width="223" height="175" rx="4"/>
+<path class="runs" d="M216.3,61.6 C216.7,64.5 216.4,67.7 215.5,70.5 C214.6,73.4 212.9,76.2 211,78.7 C209.2,81.2 206.7,83.5 204.4,85.6 C202.2,87.8 199.7,89.7 197.3,91.6 C194.9,93.5 192.5,95.4 190,97.1 C187.4,98.8 184.8,100.6 182,102 C179.2,103.4 176.1,104.6 173,105.5 C169.9,106.3 166.5,106.8 163.3,107.1 C160,107.3 156.7,107.1 153.4,106.9 C150.2,106.8 147.1,106.3 143.8,106 C140.6,105.7 137.4,105.4 134.1,105 C130.8,104.6 127.2,104.3 123.8,103.5 C120.3,102.8 116.6,102 113.4,100.6 C110.2,99.2 106.9,97.3 104.5,95.1 C102.1,92.9 100.2,90.1 98.9,87.3 C97.7,84.5 97.3,81.3 97.2,78.3 C97.1,75.3 97.7,72.3 98.2,69.6 C98.6,66.8 99.3,64.2 99.8,61.6 C100.2,59 100.5,56.6 100.8,54 C101.1,51.5 101.1,48.8 101.6,46.2 C102,43.5 102.5,40.7 103.6,38.1 C104.7,35.5 106.1,32.8 108.1,30.5 C110,28.2 112.5,26.1 115.1,24.3 C117.7,22.5 120.8,21 123.8,19.7 C126.8,18.3 130,17.2 133.2,16.2 C136.4,15.2 139.7,14.2 143,13.5 C146.4,12.8 149.9,12.1 153.4,11.9 C156.9,11.7 160.7,11.8 164.1,12.4 C167.5,13 170.9,14.2 173.9,15.7 C176.9,17.1 179.6,19.2 182,21.2 C184.4,23.2 186.3,25.6 188.3,27.7 C190.2,29.9 191.8,32 193.7,34 C195.7,36 197.7,37.8 199.8,39.8 C202,41.7 204.5,43.6 206.7,45.8 C208.8,48 211.3,50.4 212.9,53 C214.5,55.7 215.8,58.7 216.3,61.6Z"/>
+<circle class="start" cx="24" cy="128.1" r="3"/>
+<circle class="goal" cx="196" cy="49.6" r="7"/>
+<circle class="goaldot" cx="196" cy="49.6" r="2"/>
+<circle class="hball" cx="34.6" cy="128.8" r="8.9"/>
+<circle class="hball" cx="45.2" cy="127.5" r="8.9"/>
+<circle class="hball" cx="55.6" cy="124.7" r="8.9"/>
+<circle class="hball" cx="65.5" cy="120.7" r="8.9"/>
+<circle class="hball" cx="75" cy="115.8" r="8.9"/>
+<circle class="hball" cx="84.2" cy="110.3" r="8.9"/>
+<path class="hpath" d="M24,128.1 C24.4,128.2 25.7,128.4 26.6,128.5 C27.5,128.6 28.4,128.6 29.3,128.7 C30.2,128.7 31.1,128.8 32,128.8 C32.8,128.8 33.7,128.8 34.6,128.8 C35.5,128.7 36.4,128.7 37.3,128.6 C38.2,128.6 39.1,128.5 40,128.4 C40.9,128.3 41.7,128.1 42.6,128 C43.5,127.9 44.4,127.7 45.2,127.5 C46.1,127.4 47,127.2 47.9,127 C48.7,126.8 49.6,126.5 50.4,126.3 C51.3,126.1 52.2,125.8 53,125.5 C53.9,125.3 54.7,125 55.6,124.7 C56.4,124.4 57.2,124.1 58.1,123.8 C58.9,123.5 59.7,123.2 60.6,122.8 C61.4,122.5 62.2,122.1 63,121.8 C63.8,121.4 64.7,121.1 65.5,120.7 C66.3,120.3 67.1,119.9 67.9,119.5 C68.7,119.1 69.5,118.7 70.3,118.3 C71.1,117.9 71.8,117.5 72.6,117.1 C73.4,116.7 74.2,116.2 75,115.8 C75.8,115.4 76.5,114.9 77.3,114.5 C78.1,114 78.8,113.6 79.6,113.1 C80.4,112.7 81.1,112.2 81.9,111.7 C82.7,111.3 83.8,110.6 84.2,110.3"/>
+<circle class="hdot" cx="34.6" cy="128.8" r="1.8"/>
+<circle class="hdot" cx="45.2" cy="127.5" r="1.8"/>
+<circle class="hdot" cx="55.6" cy="124.7" r="1.8"/>
+<circle class="hdot" cx="65.5" cy="120.7" r="1.8"/>
+<circle class="hdot" cx="75" cy="115.8" r="1.8"/>
+<circle class="hdot" cx="84.2" cy="110.3" r="1.8"/>
+<path class="aim" d="M84.2,110.3 L99.1,102.2"/><path class="aimhead" d="M104.4,99.4 L100.6,105 L97.6,99.4Z"/>
+<text class="ti" x="177.9" y="91.1" text-anchor="middle">runs</text>
+<text class="ti" x="185" y="46.6" text-anchor="end">good</text>
+<text class="ti" x="185" y="61.6" text-anchor="end">software</text>
+</g>
+<text class="h" x="360" y="20" text-anchor="middle">a language model agent</text>
+<g transform="translate(248,34)">
+<rect class="frame" x="0.5" y="0.5" width="223" height="175" rx="4"/>
+<path class="runs" d="M216.3,61.6 C216.7,64.5 216.4,67.7 215.5,70.5 C214.6,73.4 212.9,76.2 211,78.7 C209.2,81.2 206.7,83.5 204.4,85.6 C202.2,87.8 199.7,89.7 197.3,91.6 C194.9,93.5 192.5,95.4 190,97.1 C187.4,98.8 184.8,100.6 182,102 C179.2,103.4 176.1,104.6 173,105.5 C169.9,106.3 166.5,106.8 163.3,107.1 C160,107.3 156.7,107.1 153.4,106.9 C150.2,106.8 147.1,106.3 143.8,106 C140.6,105.7 137.4,105.4 134.1,105 C130.8,104.6 127.2,104.3 123.8,103.5 C120.3,102.8 116.6,102 113.4,100.6 C110.2,99.2 106.9,97.3 104.5,95.1 C102.1,92.9 100.2,90.1 98.9,87.3 C97.7,84.5 97.3,81.3 97.2,78.3 C97.1,75.3 97.7,72.3 98.2,69.6 C98.6,66.8 99.3,64.2 99.8,61.6 C100.2,59 100.5,56.6 100.8,54 C101.1,51.5 101.1,48.8 101.6,46.2 C102,43.5 102.5,40.7 103.6,38.1 C104.7,35.5 106.1,32.8 108.1,30.5 C110,28.2 112.5,26.1 115.1,24.3 C117.7,22.5 120.8,21 123.8,19.7 C126.8,18.3 130,17.2 133.2,16.2 C136.4,15.2 139.7,14.2 143,13.5 C146.4,12.8 149.9,12.1 153.4,11.9 C156.9,11.7 160.7,11.8 164.1,12.4 C167.5,13 170.9,14.2 173.9,15.7 C176.9,17.1 179.6,19.2 182,21.2 C184.4,23.2 186.3,25.6 188.3,27.7 C190.2,29.9 191.8,32 193.7,34 C195.7,36 197.7,37.8 199.8,39.8 C202,41.7 204.5,43.6 206.7,45.8 C208.8,48 211.3,50.4 212.9,53 C214.5,55.7 215.8,58.7 216.3,61.6Z"/>
+<defs><radialGradient id="a0f" gradientUnits="userSpaceOnUse" cx="24" cy="128.1" r="38.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a0e" gradientUnits="userSpaceOnUse" cx="24" cy="128.1" r="38.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M37.4,128.2 L34.8,129.6 L35.9,130.6 L58.1,138.8 L35.8,134.2 L37.1,136.3 L31.5,134.2 L34,137.6 L30.8,136.6 L32.1,142 L28.1,137.1 L28.4,142.2 L26.7,141.7 L25.2,141.7 L24.4,143.8 L21.9,143 L21.9,137.5 L19.8,139.4 L18,139.5 L19.2,135.9 L18.2,135.4 L13.5,138.7 L13,137.2 L11.7,136.5 L8,135.2 L11.7,132.9 L8,133.6 L10.6,131.1 L14,129 L8,128 L12.6,126.7 L11.3,125.1 L10.3,122.9 L10.4,122.1 L14.8,122.5 L15.8,121.8 L16.2,120.1 L15.4,117.6 L16.5,116.7 L18.5,116.8 L18.8,113.1 L20.7,115.6 L22.9,116 L24,118.3 L24.8,118.7 L31.4,99 L27.9,117.5 L30.4,114.5 L31.5,115.4 L33.8,115.4 L34.6,117.1 L31.5,122.4 L33.2,122.6 L34.9,122.6 L33.7,124.6 L61.8,118.8 L37.5,126.7Z" style="fill:url(#a0f);stroke:url(#a0e)"/>
+<defs><radialGradient id="a1f" gradientUnits="userSpaceOnUse" cx="61.8" cy="118.8" r="37.1"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a1e" gradientUnits="userSpaceOnUse" cx="61.8" cy="118.8" r="37.1"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M77.2,119.1 L71.8,119.7 L76.2,121.8 L71.5,122.2 L71.9,123.3 L72.5,125.5 L71.2,126 L87.9,145.1 L67.7,126.3 L67.1,126.8 L67.8,130.7 L65.2,128.6 L64.1,129.1 L63.7,133.7 L62.2,133.1 L60.2,131.4 L59.1,129 L57.2,133.3 L57,129 L54.9,130.4 L54.4,128.5 L51.3,129.4 L54.7,124.8 L49.2,126.8 L53.4,122.8 L52,122.5 L46.1,122.4 L31.3,123 L49,118.5 L47.4,117.6 L48.9,115.9 L52.7,115.6 L30.9,103.9 L52.3,113.2 L50.6,110.3 L53.2,110.3 L43.9,96.6 L54.2,105.9 L55.8,105.2 L50.6,89.5 L58.5,105.1 L59.7,104.8 L61.5,103.4 L63.2,105.2 L65.2,104.8 L65.8,107 L72.4,96.6 L66.7,110.7 L71.8,105.9 L72.6,108.2 L72.8,110.1 L75.2,109.8 L75.5,111.7 L70.9,115.7 L77.6,115.5 L74.6,117.4Z" style="fill:url(#a1f);stroke:url(#a1e)"/>
+<defs><radialGradient id="a2f" gradientUnits="userSpaceOnUse" cx="87.9" cy="145.1" r="37.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a2e" gradientUnits="userSpaceOnUse" cx="87.9" cy="145.1" r="37.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M102.3,145 L120,148.4 L103.6,148.9 L101.3,149.9 L98.5,150.4 L100,152.3 L115.1,166.5 L97.7,154.3 L96.5,155.3 L94.9,155.9 L93.7,156.8 L93.1,158.5 L90.2,156.4 L89,158.2 L87.7,160.4 L87,154.1 L85,160.4 L83.1,157.8 L83.4,154.1 L79.6,158.9 L79.4,155.5 L80.3,152.7 L77.5,152.9 L78.1,151.1 L57.8,160.7 L74.3,149.5 L63.7,151.3 L73.4,146.9 L76.2,145.2 L72.2,143.2 L79,142.8 L79.2,141.9 L78.2,140.7 L78.5,139.2 L75.4,134.6 L80.7,137.8 L78.2,132.5 L80.6,133.5 L83.8,135.9 L83.6,132.4 L84.7,132.1 L86.4,134.2 L87.9,130.9 L89.1,135.4 L90.6,134.4 L91,136.1 L100.4,119.8 L94.5,133.7 L108.7,113.4 L97,134.2 L96.9,136.2 L96.3,138.7 L97.5,138.9 L96.1,140.8 L99,140.8 L100.9,141.8 L104,143.3Z" style="fill:url(#a2f);stroke:url(#a2e)"/>
+<defs><radialGradient id="a3f" gradientUnits="userSpaceOnUse" cx="108.7" cy="113.4" r="39"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a3e" gradientUnits="userSpaceOnUse" cx="108.7" cy="113.4" r="39"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M123.2,113.8 L119.4,114.7 L124,116.4 L133.3,122 L123.1,120 L122.1,121.9 L121.5,123.1 L119.8,124.7 L118.2,125 L114.6,123.2 L113.8,124.1 L113.2,126.6 L111.5,125.1 L109.7,124 L108.9,128.7 L107,127.2 L105.6,126.5 L103.3,127.9 L102.4,125.4 L91.3,143 L101.3,124.3 L84.8,144.2 L101.3,120.3 L98.2,121.4 L94.9,121.6 L97.2,118.5 L99.1,116.4 L93.9,117.1 L95.3,114.8 L92.4,113.3 L98,111.9 L99.7,111.2 L73.1,101 L94.8,106.6 L97.5,106.2 L97.1,103.8 L97.8,102.5 L100,102.3 L101.5,101.4 L103.4,102.5 L105,103.3 L105.9,101.4 L107,101.2 L109,102.9 L112.1,83.5 L111.9,100 L113.2,100.9 L113.4,103.5 L130.5,81 L115.8,104.9 L119.9,101.8 L120.7,104.4 L119.2,107.2 L116.8,109.3 L117.8,110.3 L122.7,110.5 L120.6,111.6Z" style="fill:url(#a3f);stroke:url(#a3e)"/>
+<defs><radialGradient id="a4f" gradientUnits="userSpaceOnUse" cx="130.5" cy="81" r="40.7"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a4e" gradientUnits="userSpaceOnUse" cx="130.5" cy="81" r="40.7"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M143.6,80.6 L142.5,82.6 L141.8,83.5 L143.7,85.9 L139.6,85.7 L138.1,86 L138.4,87.5 L137,87.7 L137.9,90.9 L138.2,92.4 L135.2,90.9 L135,95 L133,92.7 L134.7,115.1 L130.6,92 L129.2,90 L123,112.4 L127,91.9 L126.3,89.1 L125,89.6 L110.8,106 L120.3,91.8 L120.4,89 L119.2,88.3 L116.1,88.2 L116.3,86.2 L120.8,83.2 L116.7,83 L120.1,80.7 L121.1,79.9 L119.3,78.1 L107.8,73 L117.6,74.5 L119.4,73.7 L119.2,72.2 L120.9,71.1 L123.9,73.2 L109.5,46.1 L123.8,67.3 L126.6,69.9 L127.7,68.3 L129.3,66.4 L130,65.9 L131.8,69.7 L133.5,68 L134.4,69.6 L136.6,67.6 L138.9,67.7 L137.6,72.3 L139.3,71.8 L151.6,65 L144.2,72.1 L143.8,74 L144.7,76.4 L140.4,79 L141.4,79.5Z" style="fill:url(#a4f);stroke:url(#a4e)"/>
+<defs><radialGradient id="a5f" gradientUnits="userSpaceOnUse" cx="109.5" cy="46.1" r="38.7"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="a5e" gradientUnits="userSpaceOnUse" cx="109.5" cy="46.1" r="38.7"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M120.8,46.2 L124.4,47.6 L120.7,49 L140.2,56 L121.7,51.1 L137.5,60.1 L123.3,54.6 L133.2,63.8 L118.8,55.3 L119.7,58.5 L116.1,56.6 L115.4,57.5 L114.3,60.8 L112.1,58.4 L111.1,58.6 L109.9,57.7 L107.9,58.6 L106.8,58.8 L104.8,59.2 L105.5,54.7 L101,60.1 L102.9,54.7 L98.9,57.1 L98.9,54.5 L96.6,54.3 L94.9,52.8 L95.1,51.2 L94.7,49.1 L85.7,48.3 L99.4,45.8 L99.3,44.8 L73.8,38.3 L99.5,42.4 L100.5,41.5 L96.2,37.4 L101.9,39.9 L98.4,34.4 L103.1,37.5 L102.9,36 L105.3,37.5 L104.8,33.2 L107.3,36.2 L107.8,30.6 L109.8,34.2 L110.7,36.2 L113.4,30.7 L114.4,33.4 L116.3,31.2 L115.9,35.5 L116.1,37.5 L120.6,35.1 L119.2,38.8 L118.2,40.8 L124,38.9 L120.6,42.6 L147,36.5 L121.1,44.9Z" style="fill:url(#a5f);stroke:url(#a5e)"/>
+<path class="apath" d="M24,128.1 L61.8,118.8 L87.9,145.1 L108.7,113.4 L130.5,81 L109.5,46.1 L147,36.5"/>
+<circle class="adot" cx="61.8" cy="118.8" r="2.2"/>
+<circle class="adot" cx="87.9" cy="145.1" r="2.2"/>
+<circle class="adot" cx="108.7" cy="113.4" r="2.2"/>
+<circle class="adot" cx="130.5" cy="81" r="2.2"/>
+<circle class="adot" cx="109.5" cy="46.1" r="2.2"/>
+<circle class="adot" cx="147" cy="36.5" r="2.2"/>
+<circle class="start" cx="24" cy="128.1" r="3"/>
+<circle class="goal" cx="196" cy="49.6" r="7"/>
+<circle class="goaldot" cx="196" cy="49.6" r="2"/>
+</g>
+<text class="h" x="608" y="20" text-anchor="middle">a human at the helm</text>
+<g transform="translate(496,34)">
+<rect class="frame" x="0.5" y="0.5" width="223" height="175" rx="4"/>
+<path class="runs" d="M216.3,61.6 C216.7,64.5 216.4,67.7 215.5,70.5 C214.6,73.4 212.9,76.2 211,78.7 C209.2,81.2 206.7,83.5 204.4,85.6 C202.2,87.8 199.7,89.7 197.3,91.6 C194.9,93.5 192.5,95.4 190,97.1 C187.4,98.8 184.8,100.6 182,102 C179.2,103.4 176.1,104.6 173,105.5 C169.9,106.3 166.5,106.8 163.3,107.1 C160,107.3 156.7,107.1 153.4,106.9 C150.2,106.8 147.1,106.3 143.8,106 C140.6,105.7 137.4,105.4 134.1,105 C130.8,104.6 127.2,104.3 123.8,103.5 C120.3,102.8 116.6,102 113.4,100.6 C110.2,99.2 106.9,97.3 104.5,95.1 C102.1,92.9 100.2,90.1 98.9,87.3 C97.7,84.5 97.3,81.3 97.2,78.3 C97.1,75.3 97.7,72.3 98.2,69.6 C98.6,66.8 99.3,64.2 99.8,61.6 C100.2,59 100.5,56.6 100.8,54 C101.1,51.5 101.1,48.8 101.6,46.2 C102,43.5 102.5,40.7 103.6,38.1 C104.7,35.5 106.1,32.8 108.1,30.5 C110,28.2 112.5,26.1 115.1,24.3 C117.7,22.5 120.8,21 123.8,19.7 C126.8,18.3 130,17.2 133.2,16.2 C136.4,15.2 139.7,14.2 143,13.5 C146.4,12.8 149.9,12.1 153.4,11.9 C156.9,11.7 160.7,11.8 164.1,12.4 C167.5,13 170.9,14.2 173.9,15.7 C176.9,17.1 179.6,19.2 182,21.2 C184.4,23.2 186.3,25.6 188.3,27.7 C190.2,29.9 191.8,32 193.7,34 C195.7,36 197.7,37.8 199.8,39.8 C202,41.7 204.5,43.6 206.7,45.8 C208.8,48 211.3,50.4 212.9,53 C214.5,55.7 215.8,58.7 216.3,61.6Z"/>
+<defs><radialGradient id="h0f" gradientUnits="userSpaceOnUse" cx="24" cy="128.1" r="41.1"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h0e" gradientUnits="userSpaceOnUse" cx="24" cy="128.1" r="41.1"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M35.2,127.8 L35.6,129.3 L33.2,130.5 L58.6,140.2 L37.1,134.9 L36.4,136.5 L36,138.1 L33.1,137.9 L34.2,141 L29.8,137.5 L28.6,137.5 L29,141.2 L26.7,140.9 L25.3,142.9 L23.8,139.7 L22.7,140.6 L21.2,138.6 L20.2,139.8 L17.4,141.3 L8,155.1 L17.2,137.1 L12.8,139.7 L11.7,137.9 L16.3,133.1 L10.7,134.6 L10,132.9 L14,130.3 L10.9,130 L14,128.3 L8.5,126.9 L10.4,124.8 L15.2,125.2 L15.4,124.2 L14.7,122.4 L14,119.7 L13.8,118.2 L14.5,115.4 L18.5,120.1 L19,117.7 L11.2,89.6 L20.3,115.5 L14.2,88.3 L22.6,115.7 L24.2,116.6 L25.4,117 L26.5,118.4 L28.7,115.6 L30.6,115.4 L30.3,118.4 L43,103 L35.1,116.3 L34.1,119.7 L53.1,110.7 L36.4,121.8 L35.8,123.9 L39.4,124.3 L35.4,126.6Z" style="fill:url(#h0f);stroke:url(#h0e)"/>
+<defs><radialGradient id="h1f" gradientUnits="userSpaceOnUse" cx="53.1" cy="110.7" r="41.1"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h1e" gradientUnits="userSpaceOnUse" cx="53.1" cy="110.7" r="41.1"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M62.3,110.9 L62.2,111.6 L64.5,113.5 L63.6,114.5 L66.3,117.1 L64.7,118.1 L65,120.3 L60.7,118.6 L58.8,117.9 L60.6,123.1 L57.3,119.8 L63.1,141.4 L56.1,124.5 L54.8,124.5 L53.2,125.4 L51.4,124 L50.7,122.8 L50,119.6 L48.4,119.6 L44.3,124.4 L46,119.1 L45.9,117.9 L41,120.2 L39.6,119.7 L39.7,117.6 L37.8,116.2 L18,117.8 L37.6,112.8 L39,110.4 L44,109.5 L38.6,106.9 L14.2,97.2 L40.9,105.7 L18.2,93.8 L43,104.2 L45.7,104.9 L26.9,84.2 L46.7,103.2 L45.3,98 L47.2,97.8 L47.8,96.5 L50.7,100.1 L51.9,101 L52.7,99.4 L54.5,97.9 L56.1,99.2 L57.1,99.6 L58,100.4 L59.6,100.4 L61.1,100.4 L61.5,102.8 L62.1,103.9 L62.2,105.3 L83.1,96.2 L65.5,106.5 L65.5,107.9 L65.7,109.5Z" style="fill:url(#h1f);stroke:url(#h1e)"/>
+<defs><radialGradient id="h2f" gradientUnits="userSpaceOnUse" cx="83.1" cy="96.2" r="39.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h2e" gradientUnits="userSpaceOnUse" cx="83.1" cy="96.2" r="39.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M97.7,95.9 L97.8,98.2 L96.1,99.4 L95.7,100.4 L93.3,101.1 L112.3,115.2 L94.1,104.9 L93.2,106.8 L106.8,126 L89.8,107.3 L87.7,106.4 L86.7,106.8 L85.3,106.4 L84.5,107.3 L83.3,105.5 L81.8,109.3 L79.3,111 L78.7,108.6 L78.8,104.8 L76.2,106.7 L75.5,105.2 L75.2,104.5 L74.4,103 L75,101.2 L71.9,101.1 L72,100.1 L71.3,98.7 L44.5,100.1 L69.9,96.9 L44.8,96.3 L71.8,94.9 L67.5,92.6 L73.2,92.4 L72.8,90.9 L74.9,90.9 L73.1,87.7 L75.5,88.8 L77.2,88.5 L61.6,62.5 L77.4,84.2 L79.9,86.8 L80,80.5 L80.9,80.5 L83.2,81.8 L84.1,86.1 L86.8,80.7 L86.5,85.3 L87,87.8 L90.1,85.4 L92.9,83.5 L91.1,88.5 L93.1,88.2 L107.3,80.5 L97.4,89.2 L98.5,90.8 L93.5,93.5 L99.4,94.5Z" style="fill:url(#h2f);stroke:url(#h2e)"/>
+<defs><radialGradient id="h3f" gradientUnits="userSpaceOnUse" cx="61.6" cy="62.5" r="39.2"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h3e" gradientUnits="userSpaceOnUse" cx="61.6" cy="62.5" r="39.2"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M94.3,61.9 L74.8,64.2 L75.6,65.7 L96.7,75.6 L74.3,69.1 L74.5,71.1 L73.9,72.5 L70.4,71.2 L68,70.9 L68.5,72.9 L67.1,74.2 L65.3,72.2 L63.5,71.9 L63.9,89.2 L61.8,77 L59.5,78.2 L59.3,73.3 L51.5,94.5 L56.6,73.2 L56.8,70.4 L54.3,71.7 L50.2,73.4 L50.9,71.7 L53.3,68.2 L49.3,68.6 L48.8,67.2 L48.8,65 L46,64.8 L46,62.7 L48.4,60.9 L36,57.5 L50.1,58.4 L47.4,56.1 L49.7,55 L50.7,53.6 L51,52.2 L52.8,51.1 L55.7,52.5 L55.4,48.9 L56.7,48.4 L58.1,48.1 L60.1,51.5 L61.8,49.3 L63,51.6 L63.8,52.5 L65.7,51.7 L77.5,26.7 L69.2,50 L69.6,52.9 L72.6,51.5 L73.1,53.9 L72.4,55.3 L74.1,56.7 L73.9,58.1 L75.6,59.4 L76.2,61.1Z" style="fill:url(#h3f);stroke:url(#h3e)"/>
+<defs><radialGradient id="h4f" gradientUnits="userSpaceOnUse" cx="77.5" cy="26.7" r="34.3"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h4e" gradientUnits="userSpaceOnUse" cx="77.5" cy="26.7" r="34.3"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M111.8,27.3 L90.8,28.2 L88.5,29.3 L91.1,31 L91.9,33.1 L87.4,33.2 L99.1,43.1 L87.6,35.2 L101.1,48.8 L84.6,36.2 L85.2,39 L84.3,40.2 L82.5,41.9 L80.7,42.2 L79.5,42.4 L77.5,39.1 L75.9,37.8 L74.3,42.5 L73.4,38.8 L70.9,39.9 L68.5,40.2 L68.4,37.4 L70,34.5 L67.8,34.7 L66,33.9 L65.8,32.1 L62.7,31.9 L63.9,29.8 L65.1,28.5 L64.7,26.4 L68,25.5 L66.1,24.4 L63.5,22 L65.2,20.9 L52.9,10.9 L66.3,17.3 L69.5,18.3 L70.5,17.6 L68.9,13.3 L68.3,8 L72.8,13 L75.1,17.2 L76.2,13.9 L77.2,8 L78.6,14.7 L80,15.5 L82.7,12.4 L83.3,14.6 L85.6,14.7 L83.9,19.1 L88.9,15.2 L85.7,20.1 L88.5,19.3 L89.7,20.4 L88.1,22.7 L88.1,24.3 L92.9,24.5Z" style="fill:url(#h4f);stroke:url(#h4e)"/>
+<defs><radialGradient id="h5f" gradientUnits="userSpaceOnUse" cx="111.8" cy="27.3" r="34.2"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="h5e" gradientUnits="userSpaceOnUse" cx="111.8" cy="27.3" r="34.2"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M122.8,26.9 L122.6,28.3 L122.1,29.3 L122.4,30.9 L140.1,41.5 L125.3,36 L136.1,46.4 L121.5,36.2 L135.4,52.1 L119.3,36.1 L118.3,37.8 L117.1,38.5 L115,35.9 L114.7,41.6 L113.1,41 L112,39 L108,53.4 L109.2,40.3 L108.4,37.7 L106.5,38.9 L104.4,39 L105.7,34.9 L102.7,36 L99.3,37.4 L86.6,42.8 L103.2,31.1 L98.7,31.4 L96.9,30.9 L99.5,28.8 L100,27 L99.5,26 L97.2,23.7 L103.1,24.3 L102.4,23 L98.5,18.6 L100,17.2 L105.4,20.8 L104,17.6 L104.8,16.8 L107.4,17.6 L107.1,12.5 L108.9,13.1 L110.2,15.7 L112,12.3 L112.7,16.5 L115,12.2 L117.1,12.2 L118.4,14.3 L117.5,18.3 L119.8,17.1 L119.7,19.8 L119.1,21 L122.8,20.7 L125.3,20.6 L121,23.8 L127.7,24.1 L136.6,23.6Z" style="fill:url(#h5f);stroke:url(#h5e)"/>
+<path class="apath" d="M24,128.1 L53.1,110.7 L83.1,96.2 L61.6,62.5 L77.5,26.7 L111.8,27.3 L135.4,52.1"/>
+<circle class="adot" cx="53.1" cy="110.7" r="2.2"/>
+<circle class="adot" cx="83.1" cy="96.2" r="2.2"/>
+<circle class="adot" cx="61.6" cy="62.5" r="2.2"/>
+<circle class="adot" cx="77.5" cy="26.7" r="2.2"/>
+<circle class="adot" cx="111.8" cy="27.3" r="2.2"/>
+<circle class="adot" cx="135.4" cy="52.1" r="2.2"/>
+<circle class="start" cx="24" cy="128.1" r="3"/>
+<circle class="goal" cx="196" cy="49.6" r="7"/>
+<circle class="goaldot" cx="196" cy="49.6" r="2"/>
+<circle class="hball" cx="33.7" cy="122.3" r="8.9"/>
+<circle class="hball" cx="43.4" cy="116.5" r="8.9"/>
+<circle class="hball" cx="53.1" cy="110.7" r="8.9"/>
+<circle class="hball" cx="63.1" cy="105.9" r="8.9"/>
+<circle class="hball" cx="73.1" cy="101" r="8.9"/>
+<circle class="hball" cx="83.1" cy="96.2" r="8.9"/>
+<circle class="hdot" cx="33.7" cy="122.3" r="1.8"/>
+<circle class="hdot" cx="43.4" cy="116.5" r="1.8"/>
+<circle class="hdot" cx="63.1" cy="105.9" r="1.8"/>
+<circle class="hdot" cx="73.1" cy="101" r="1.8"/>
+<circle class="pick" cx="53.1" cy="110.7" r="4.5"/>
+<circle class="pick" cx="83.1" cy="96.2" r="4.5"/>
+</g>
+</svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 214" role="img" aria-labelledby="t d">
+<title id="t">Training at frontier labs stretches a language model agent's distribution of next steps into software that runs. A harness a human can read bends it toward good software</title>
+<desc id="d">Four panels share one state (dot) and a ring marking the goal, good software. The first three also show a dashed region of software that runs, with the goal inside it. Each panel draws, as a jagged ball, the distribution of next steps that the language model and its harness induce from the state, and one draw from it, a leap, as a line to a landing dot. All four balls share one ragged core, so only the spikes and the place of the mass change. Training moves the mass outward: in pretraining it sits in a dense core, and in reinforcement learning and the harness it sits out along long arms around a pale core. Three panels sit under the heading 'trained into the weights by frontier labs'. In pretraining, fourteen short spikes point in every direction and the draw is short. In fine-tuning, five spikes point in fewer directions and reach farther. In reinforcement learning, three long tapered arms reach into the region that runs, all of them on one side of the goal and none at it, and the draw lands in that region far from the goal. Labs also train toward what people generally want from software, from human preferences, but all of this training happens before the agent meets this project, so none of it can aim at this goal. The last panel, types, tests, and plans, sits under 'built into the harness'. Shaded walls of types, tests, and benchmarks bound a corridor from the state to the goal. The walls slice the distribution: inside the corridor it keeps its density, and past the walls it shows only as a faint dashed outline, mass the harness removes. A faint red band, the plan a human holds, runs along the corridor, and one arm follows it toward the goal. The draw lands at the end of that arm near the goal, inside a red ball with a red ring: a human reading the draw and accepting it.</desc>
+<style>
+.h{font:15px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#1a1714}
+.frame{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.rule{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.hball{fill:#d2371f;fill-opacity:0.10;stroke:#d2371f;stroke-opacity:0.6;stroke-width:1}
+.hpath{fill:none;stroke:#d2371f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.route{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 5;stroke-linecap:round;stroke-opacity:0.8}
+.aball{fill:#11767a;fill-opacity:0.09;stroke:#11767a;stroke-opacity:0.75;stroke-width:1;stroke-linejoin:round}
+.adens{stroke-width:1;stroke-linejoin:round}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#11767a}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.08}.df3{stop-opacity:0}
+.de0{stop-opacity:0.80}.de1{stop-opacity:0.44}.de2{stop-opacity:0.05}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#11767a}
+.dm0{stop-opacity:0.22}.dm1{stop-opacity:0.18}.dm2{stop-opacity:0.13}.dm3{stop-opacity:0.04}
+.dme0{stop-opacity:0.62}.dme1{stop-opacity:0.55}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.07}.da1{stop-opacity:0.10}.da2{stop-opacity:0.30}.da3{stop-opacity:0.46}.da4{stop-opacity:0.40}
+.dae0{stop-opacity:0.34}.dae1{stop-opacity:0.46}.dae2{stop-opacity:0.88}.dae3{stop-opacity:0.84}
+.apath{fill:none;stroke:#11767a;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.adot{fill:#11767a}
+.start{fill:#1a1714}
+.goal{fill:none;stroke:#1a1714;stroke-width:1.4}
+.goaldot{fill:#1a1714}
+.t{font:14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.ti{font:italic 14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.hdot{fill:#d2371f}
+.pick{fill:none;stroke:#d2371f;stroke-width:1.5}
+.aim{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 4;stroke-linecap:round}
+.aimhead{fill:#d2371f}
+.runs{fill:rgba(26,23,20,0.035);stroke:rgba(26,23,20,0.45);stroke-width:1;stroke-dasharray:3 3}
+@media (prefers-color-scheme: dark){
+.h{fill:#ece3d2}
+.frame,.rule{stroke:rgba(236,227,210,0.28)}
+.hball{fill:#fe5a44;stroke:#fe5a44;fill-opacity:0.14}
+.hpath,.route{stroke:#fe5a44}
+.aball{fill:#3fb8b8;stroke:#3fb8b8;fill-opacity:0.11}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#3fb8b8}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.09}
+.de0{stop-opacity:0.76}.de1{stop-opacity:0.42}.de2{stop-opacity:0.06}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#3fb8b8}
+.dm0{stop-opacity:0.24}.dm1{stop-opacity:0.20}.dm2{stop-opacity:0.15}.dm3{stop-opacity:0.05}
+.dme0{stop-opacity:0.58}.dme1{stop-opacity:0.52}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.08}.da1{stop-opacity:0.12}.da2{stop-opacity:0.32}.da3{stop-opacity:0.48}.da4{stop-opacity:0.42}
+.dae0{stop-opacity:0.32}.dae1{stop-opacity:0.44}.dae2{stop-opacity:0.85}.dae3{stop-opacity:0.80}
+.apath{stroke:#3fb8b8}
+.adot{fill:#3fb8b8}
+.start,.goaldot{fill:#ece3d2}
+.goal{stroke:#ece3d2}
+.t,.ti{fill:#b0a692}
+.hdot,.aimhead{fill:#fe5a44}
+.pick,.aim{stroke:#fe5a44}
+.runs{fill:rgba(236,227,210,0.04);stroke:rgba(236,227,210,0.42)}
+}
+
+.wall{fill:#ece8dd;fill-opacity:0.65;stroke:none}
+.fence{fill:none;stroke:#1a1714;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.acut{fill:none;stroke:#11767a;stroke-opacity:0.46;stroke-width:1.05;stroke-dasharray:2.5 2.5;stroke-linecap:round}
+.plan{fill:none;stroke:#d2371f;stroke-opacity:0.22;stroke-width:8.5;stroke-linecap:round;stroke-linejoin:round}
+@media (prefers-color-scheme: dark){
+.wall{fill:#1e1b15;fill-opacity:0.80}
+.fence{stroke:#ece3d2}
+.acut{stroke:#3fb8b8;stroke-opacity:0.50}
+.plan{stroke:#fe5a44;stroke-opacity:0.26}
+}
+</style>
+<text class="h" x="268" y="15" text-anchor="middle">trained into the weights by frontier labs</text>
+<path class="rule" d="M0.5,28 V23 H535.5 V28"/>
+<text class="h" x="636" y="15" text-anchor="middle">built into the harness</text>
+<path class="rule" d="M552.5,28 V23 H719.5 V28"/>
+<text class="h" x="84" y="43" text-anchor="middle">pretraining</text>
+<clipPath id="clip0"><rect x="0" y="0" width="168" height="160" rx="4"/></clipPath>
+<g transform="translate(0,52)">
+<g clip-path="url(#clip0)">
+<path class="runs" d="M162.1,59.2 C162.5,61.9 162.2,64.9 161.4,67.6 C160.6,70.3 159,72.9 157.3,75.3 C155.6,77.7 153.4,79.8 151.3,81.9 C149.3,83.9 147,85.7 144.8,87.5 C142.7,89.3 140.5,91.1 138.2,92.7 C135.9,94.3 133.5,96 131,97.3 C128.4,98.6 125.6,99.8 122.8,100.6 C120,101.4 116.9,101.8 113.9,102.1 C111,102.3 107.9,102.1 105,101.9 C102.1,101.8 99.2,101.4 96.3,101.1 C93.4,100.8 90.5,100.5 87.4,100.1 C84.4,99.7 81.2,99.4 78,98.7 C74.9,98 71.5,97.2 68.6,95.9 C65.7,94.6 62.7,92.9 60.5,90.8 C58.4,88.7 56.6,86 55.5,83.4 C54.4,80.8 54,77.7 53.9,74.9 C53.8,72.2 54.4,69.3 54.8,66.7 C55.2,64.1 55.8,61.6 56.2,59.2 C56.6,56.8 56.9,54.5 57.2,52.1 C57.4,49.6 57.4,47.2 57.9,44.7 C58.3,42.2 58.7,39.5 59.7,37.1 C60.7,34.6 62,32.1 63.8,29.9 C65.5,27.7 67.8,25.8 70.2,24.1 C72.5,22.3 75.3,21 78,19.7 C80.8,18.4 83.7,17.4 86.6,16.4 C89.5,15.4 92.5,14.5 95.5,13.8 C98.6,13.2 101.8,12.5 105,12.3 C108.2,12.2 111.6,12.2 114.7,12.8 C117.8,13.4 120.9,14.5 123.6,15.9 C126.3,17.3 128.8,19.2 131,21.1 C133.1,23 134.9,25.3 136.6,27.3 C138.4,29.3 139.9,31.3 141.6,33.2 C143.4,35.1 145.2,36.8 147.1,38.6 C149.1,40.5 151.4,42.2 153.4,44.3 C155.3,46.4 157.6,48.7 159,51.1 C160.5,53.6 161.7,56.5 162.1,59.2Z"/>
+<text class="ti" x="97.1" y="42.2" text-anchor="middle">runs</text>
+<text class="ti" x="129.9" y="69" text-anchor="end">good</text>
+<text class="ti" x="129.9" y="84" text-anchor="end">software</text>
+<defs><radialGradient id="pf" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="28.4"><stop offset="0" class="df0"/><stop offset="0.32" class="df1"/><stop offset="0.62" class="df2"/><stop offset="1" class="df3"/></radialGradient><radialGradient id="pe" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="28.4"><stop offset="0" class="de0"/><stop offset="0.36" class="de1"/><stop offset="1" class="de2"/></radialGradient></defs>
+<path class="adens" d="M44.7,128 L43.7,128.3 L52.6,130.1 L43.5,129.7 L44.3,130.9 L43.2,131.5 L42.7,131.9 L51.9,138.8 L41.9,133.2 L41.6,133.7 L41.8,135.2 L40.3,134.7 L44.2,142.2 L39.1,135.5 L39.3,137 L38.2,137.1 L36.9,136.2 L37.2,146.5 L35.4,136.4 L34.4,136 L33.1,138 L33.2,136.2 L28.6,147.3 L31.9,135.7 L30.1,137 L29.8,135.6 L29.9,134.4 L23,140.3 L28.8,133.4 L27.8,133.4 L28.5,131.9 L27.7,131.5 L17.2,134.6 L27.2,130.2 L27.6,129.6 L24.5,129.1 L26.4,128 L26.9,127.6 L18,125.6 L27.1,126.1 L27,125.3 L27.9,124.7 L27.9,123.9 L19.4,117.3 L28.8,122.7 L29.2,122.5 L27.9,119.8 L30.3,121.2 L26.6,113.6 L31.6,120.5 L30.8,118 L32.7,120.1 L33.5,119.7 L33.8,119.7 L33.5,107.7 L35.3,119.6 L36.2,119.4 L37.5,117.5 L37.5,119.9 L41.4,111.1 L38.8,120.4 L40.6,118.8 L40.1,121.4 L40.8,121.7 L50.4,113.4 L41.8,122.7 L42,123.1 L43.2,123.4 L43,124.6 L53.4,121.7 L43.4,126 L44.3,126.1 L45.3,127Z" style="fill:url(#pf);stroke:url(#pe)"/>
+<path class="apath" d="M35.3,128 L53.4,121.7"/>
+<circle class="adot" cx="53.4" cy="121.7" r="2.2"/>
+<circle class="start" cx="35.3" cy="128" r="3"/>
+<circle class="goal" cx="139.9" cy="72" r="6"/>
+<circle class="goaldot" cx="139.9" cy="72" r="1.8"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="167" height="159" rx="4"/>
+</g>
+<text class="h" x="268" y="43" text-anchor="middle">fine-tuning</text>
+<clipPath id="clip1"><rect x="0" y="0" width="168" height="160" rx="4"/></clipPath>
+<g transform="translate(184,52)">
+<g clip-path="url(#clip1)">
+<path class="runs" d="M162.1,59.2 C162.5,61.9 162.2,64.9 161.4,67.6 C160.6,70.3 159,72.9 157.3,75.3 C155.6,77.7 153.4,79.8 151.3,81.9 C149.3,83.9 147,85.7 144.8,87.5 C142.7,89.3 140.5,91.1 138.2,92.7 C135.9,94.3 133.5,96 131,97.3 C128.4,98.6 125.6,99.8 122.8,100.6 C120,101.4 116.9,101.8 113.9,102.1 C111,102.3 107.9,102.1 105,101.9 C102.1,101.8 99.2,101.4 96.3,101.1 C93.4,100.8 90.5,100.5 87.4,100.1 C84.4,99.7 81.2,99.4 78,98.7 C74.9,98 71.5,97.2 68.6,95.9 C65.7,94.6 62.7,92.9 60.5,90.8 C58.4,88.7 56.6,86 55.5,83.4 C54.4,80.8 54,77.7 53.9,74.9 C53.8,72.2 54.4,69.3 54.8,66.7 C55.2,64.1 55.8,61.6 56.2,59.2 C56.6,56.8 56.9,54.5 57.2,52.1 C57.4,49.6 57.4,47.2 57.9,44.7 C58.3,42.2 58.7,39.5 59.7,37.1 C60.7,34.6 62,32.1 63.8,29.9 C65.5,27.7 67.8,25.8 70.2,24.1 C72.5,22.3 75.3,21 78,19.7 C80.8,18.4 83.7,17.4 86.6,16.4 C89.5,15.4 92.5,14.5 95.5,13.8 C98.6,13.2 101.8,12.5 105,12.3 C108.2,12.2 111.6,12.2 114.7,12.8 C117.8,13.4 120.9,14.5 123.6,15.9 C126.3,17.3 128.8,19.2 131,21.1 C133.1,23 134.9,25.3 136.6,27.3 C138.4,29.3 139.9,31.3 141.6,33.2 C143.4,35.1 145.2,36.8 147.1,38.6 C149.1,40.5 151.4,42.2 153.4,44.3 C155.3,46.4 157.6,48.7 159,51.1 C160.5,53.6 161.7,56.5 162.1,59.2Z"/>
+<defs><radialGradient id="sf" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="41.4"><stop offset="0" class="dm0"/><stop offset="0.4" class="dm1"/><stop offset="0.75" class="dm2"/><stop offset="1" class="dm3"/></radialGradient><radialGradient id="se" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="41.4"><stop offset="0" class="dme0"/><stop offset="0.4" class="dme1"/><stop offset="1" class="dme2"/></radialGradient></defs>
+<path class="adens" d="M44.7,128 L43.7,128.4 L60.2,131.5 L43.5,129.9 L44.3,130.9 L43.2,131.5 L43.5,132.8 L43,133.6 L41.6,133.7 L41.8,135.2 L40.9,135.8 L39.4,135.2 L39.3,137 L38.2,137.1 L37,136 L36.3,138 L35.3,137.6 L34.4,136 L33.1,138 L32.4,137 L32.1,135.2 L30.1,137 L29.8,135.6 L30,133.8 L27.4,135.1 L27.8,133.4 L28.5,131.9 L25.4,132.4 L26.7,130.8 L27.6,129.6 L24.5,129.1 L26.4,128 L27.4,127.2 L24.6,125.7 L27,125.3 L27.9,124.7 L25.7,122.5 L28.3,123 L29.2,122.5 L27.9,119.8 L30.3,121.2 L31.1,120.8 L30.8,118 L32.7,120.1 L33.5,119.7 L34.1,117.2 L34.8,119.6 L36.3,99.2 L36.3,119.7 L37.5,117.5 L37.8,120.2 L38.6,120.3 L52.2,96.2 L39.9,121 L40.1,121.4 L41.3,121.3 L41.4,122.3 L60.8,108.1 L42.3,123.4 L43.2,123.4 L44.6,123.8 L43.2,125.1 L68.9,119 L43.6,126.5 L45.3,127Z" style="fill:url(#sf);stroke:url(#se)"/>
+<path class="apath" d="M35.3,128 L52.2,96.2"/>
+<circle class="adot" cx="52.2" cy="96.2" r="2.2"/>
+<circle class="start" cx="35.3" cy="128" r="3"/>
+<circle class="goal" cx="139.9" cy="72" r="6"/>
+<circle class="goaldot" cx="139.9" cy="72" r="1.8"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="167" height="159" rx="4"/>
+</g>
+<text class="h" x="452" y="43" text-anchor="middle">reinforcement learning</text>
+<clipPath id="clip2"><rect x="0" y="0" width="168" height="160" rx="4"/></clipPath>
+<g transform="translate(368,52)">
+<g clip-path="url(#clip2)">
+<path class="runs" d="M162.1,59.2 C162.5,61.9 162.2,64.9 161.4,67.6 C160.6,70.3 159,72.9 157.3,75.3 C155.6,77.7 153.4,79.8 151.3,81.9 C149.3,83.9 147,85.7 144.8,87.5 C142.7,89.3 140.5,91.1 138.2,92.7 C135.9,94.3 133.5,96 131,97.3 C128.4,98.6 125.6,99.8 122.8,100.6 C120,101.4 116.9,101.8 113.9,102.1 C111,102.3 107.9,102.1 105,101.9 C102.1,101.8 99.2,101.4 96.3,101.1 C93.4,100.8 90.5,100.5 87.4,100.1 C84.4,99.7 81.2,99.4 78,98.7 C74.9,98 71.5,97.2 68.6,95.9 C65.7,94.6 62.7,92.9 60.5,90.8 C58.4,88.7 56.6,86 55.5,83.4 C54.4,80.8 54,77.7 53.9,74.9 C53.8,72.2 54.4,69.3 54.8,66.7 C55.2,64.1 55.8,61.6 56.2,59.2 C56.6,56.8 56.9,54.5 57.2,52.1 C57.4,49.6 57.4,47.2 57.9,44.7 C58.3,42.2 58.7,39.5 59.7,37.1 C60.7,34.6 62,32.1 63.8,29.9 C65.5,27.7 67.8,25.8 70.2,24.1 C72.5,22.3 75.3,21 78,19.7 C80.8,18.4 83.7,17.4 86.6,16.4 C89.5,15.4 92.5,14.5 95.5,13.8 C98.6,13.2 101.8,12.5 105,12.3 C108.2,12.2 111.6,12.2 114.7,12.8 C117.8,13.4 120.9,14.5 123.6,15.9 C126.3,17.3 128.8,19.2 131,21.1 C133.1,23 134.9,25.3 136.6,27.3 C138.4,29.3 139.9,31.3 141.6,33.2 C143.4,35.1 145.2,36.8 147.1,38.6 C149.1,40.5 151.4,42.2 153.4,44.3 C155.3,46.4 157.6,48.7 159,51.1 C160.5,53.6 161.7,56.5 162.1,59.2Z"/>
+<defs><radialGradient id="rf" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="118"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="re" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="118"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M44.7,128 L44.2,128.9 L44.5,130 L44.3,130.9 L43.2,131.5 L43.5,132.8 L43,133.6 L41.6,133.7 L41.8,135.2 L40.9,135.8 L39.4,135.2 L39.3,137 L38.2,137.1 L37,136 L36.3,138 L35.3,137.6 L34.4,136 L33.8,136.3 L30.8,144.8 L32.4,135.9 L32.1,135.2 L30.1,137 L29.8,135.6 L30,133.8 L27.4,135.1 L27.8,133.4 L28.5,131.9 L25.4,132.4 L27.4,130.9 L16.7,133 L27,129.5 L24.5,129.1 L26.4,128 L27.4,127.2 L24.6,125.7 L27,125.3 L27.9,124.7 L25.7,122.5 L28.3,123 L29.2,122.5 L27.9,119.8 L30.3,121.2 L31.1,120.8 L30.8,118 L32.7,120.1 L33.5,119.7 L34.1,117.2 L35.3,119.7 L36.2,119.4 L37.5,117.5 L43.5,103.5 L67.5,48.3 L42,115.3 L52.3,99 L97.9,35.1 L44.5,117 L59.2,101.9 L120.2,46 L62.2,105 L43.2,123.4 L44.6,123.8 L43.2,125.4 L44.3,126.1 L45.3,127Z" style="fill:url(#rf);stroke:url(#re)"/>
+<path class="apath" d="M35.3,128 L97.9,35.1"/>
+<circle class="adot" cx="97.9" cy="35.1" r="2.2"/>
+<circle class="start" cx="35.3" cy="128" r="3"/>
+<circle class="goal" cx="139.9" cy="72" r="6"/>
+<circle class="goaldot" cx="139.9" cy="72" r="1.8"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="167" height="159" rx="4"/>
+</g>
+<text class="h" x="636" y="43" text-anchor="middle">types, tests, and plans</text>
+<clipPath id="clip3"><rect x="0" y="0" width="168" height="160" rx="4"/></clipPath>
+<g transform="translate(552,52)">
+<g clip-path="url(#clip3)">
+<path class="wall" d="M-310.3,329.9 L395,-47.5 L583.8,305.2 L-121.6,682.6Z"/>
+<path class="wall" d="M-324.5,303.5 L380.9,-73.9 L192.2,-426.6 L-513.2,-49.2Z"/>
+<clipPath id="hin"><path d="M-324.5,303.5 L380.9,-73.9 L395,-47.5 L-310.3,329.9 Z"/></clipPath>
+<clipPath id="hout"><path d="M-310.3,329.9 L395,-47.5 L583.8,305.2 L-121.6,682.6 Z M-324.5,303.5 L380.9,-73.9 L192.2,-426.6 L-513.2,-49.2 Z"/></clipPath>
+<path class="plan" d="M35.3,128 L139.9,72"/>
+<g clip-path="url(#hin)">
+<defs><radialGradient id="hf" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="118"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="he" gradientUnits="userSpaceOnUse" cx="35.3" cy="128" r="118"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M44.7,128 L44.2,128.9 L44.5,130 L44.3,130.9 L43.2,131.5 L43.5,132.8 L43,133.6 L41.6,133.7 L41.8,135.2 L40.9,135.8 L39.4,135.2 L39.3,137 L38.2,137.1 L37,136 L36.3,138 L35.3,137.6 L34.4,136 L33.8,136.3 L30.8,144.8 L32.4,135.9 L32.1,135.2 L30.1,137 L29.8,135.6 L30,133.8 L27.4,135.1 L27.8,133.4 L28.5,131.9 L25.4,132.4 L27.4,130.9 L16.7,133 L27,129.5 L24.5,129.1 L26.4,128 L27.4,127.2 L24.6,125.7 L27,125.3 L27.9,124.7 L25.7,122.5 L28.3,123 L29.2,122.5 L27.9,119.8 L30.3,121.2 L31.1,120.8 L30.8,118 L32.7,120.1 L33.5,119.7 L34.1,117.2 L35.3,119.7 L36.2,119.4 L37.5,117.5 L43.5,103.5 L67.5,48.3 L42,115.3 L52.3,99 L97.9,35.1 L44.5,117 L59.2,101.9 L120.2,46 L62.2,105 L46.9,119.5 L59.5,113.1 L119,83.2 L61.2,116.1 L43.2,125.4 L44.3,126.1 L45.3,127Z" style="fill:url(#hf);stroke:url(#he)"/>
+</g>
+<g clip-path="url(#hout)">
+<path class="acut" d="M44.7,128 L44.2,128.9 L44.5,130 L44.3,130.9 L43.2,131.5 L43.5,132.8 L43,133.6 L41.6,133.7 L41.8,135.2 L40.9,135.8 L39.4,135.2 L39.3,137 L38.2,137.1 L37,136 L36.3,138 L35.3,137.6 L34.4,136 L33.8,136.3 L30.8,144.8 L32.4,135.9 L32.1,135.2 L30.1,137 L29.8,135.6 L30,133.8 L27.4,135.1 L27.8,133.4 L28.5,131.9 L25.4,132.4 L27.4,130.9 L16.7,133 L27,129.5 L24.5,129.1 L26.4,128 L27.4,127.2 L24.6,125.7 L27,125.3 L27.9,124.7 L25.7,122.5 L28.3,123 L29.2,122.5 L27.9,119.8 L30.3,121.2 L31.1,120.8 L30.8,118 L32.7,120.1 L33.5,119.7 L34.1,117.2 L35.3,119.7 L36.2,119.4 L37.5,117.5 L43.5,103.5 L67.5,48.3 L42,115.3 L52.3,99 L97.9,35.1 L44.5,117 L59.2,101.9 L120.2,46 L62.2,105 L46.9,119.5 L59.5,113.1 L119,83.2 L61.2,116.1 L43.2,125.4 L44.3,126.1 L45.3,127 L44.7,128"/>
+</g>
+<path class="fence" d="M-310.3,329.9 L395,-47.5"/>
+<path class="fence" d="M-324.5,303.5 L380.9,-73.9"/>
+<path class="apath" d="M35.3,128 L119,83.2"/>
+<circle class="hball" cx="119" cy="83.2" r="6.5"/>
+<circle class="adot" cx="119" cy="83.2" r="2.2"/>
+<circle class="pick" cx="119" cy="83.2" r="4.5"/>
+<circle class="start" cx="35.3" cy="128" r="3"/>
+<circle class="goal" cx="139.9" cy="72" r="6"/>
+<circle class="goaldot" cx="139.9" cy="72" r="1.8"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="167" height="159" rx="4"/>
+</g>
+</svg>

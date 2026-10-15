@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="t d">
+<title id="t">A human reading a language model agent's raw chat falls behind after two of six leaps. When the agent reports checkpoints in a language a human can read, three messages cover all six leaps</title>
+<desc id="d">Two rows, 'raw chat' and 'checkpoints the agent reports', each pairing a search map on the left with a chat window on the right labeled 'the agent's messages'. On both maps a shaded region ruled out by tools blocks the direct diagonal between start and goal, and at each of the six steps of a language model agent a jagged ball, pale at its center with its mass out along its spikes, shows the distribution of next steps and one leap drawn from it. Top row ('raw chat'): in the chat window, six groups of four or five rounded teal bars, one group per leap, show the stream of messages, tool calls, and edits, running past the bottom edge of the window. The soft red area of what the human understands sits behind only the first two groups in the chat window and covers only the first two leaps on the map, read with six small red balls (three per leap). Past the second leap the chat goes unread and the agent's path zigzags sharply around the blocked region to the goal. Bottom row ('checkpoints the agent reports'): in the chat window, the six groups of raw chat bars are faint, and after every two leaps a checkpoint entry stands out as a red square followed by a single teal bar, with the soft red area behind the three entries only. On the map, the three matching red checkpoint squares sit at leaps two, four, and six, each read with one red ball, the soft red area covers the entire route, and the detour runs smooth to the goal.</desc>
+<style>
+.h{font:15px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#1a1714}
+.frame{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.rule{fill:none;stroke:rgba(26,23,20,0.3);stroke-width:1}
+.hball{fill:#d2371f;fill-opacity:0.10;stroke:#d2371f;stroke-opacity:0.6;stroke-width:1}
+.hpath{fill:none;stroke:#d2371f;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.route{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 5;stroke-linecap:round;stroke-opacity:0.8}
+.aball{fill:#11767a;fill-opacity:0.09;stroke:#11767a;stroke-opacity:0.75;stroke-width:1;stroke-linejoin:round}
+.adens{stroke-width:1;stroke-linejoin:round}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#11767a}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.08}.df3{stop-opacity:0}
+.de0{stop-opacity:0.80}.de1{stop-opacity:0.44}.de2{stop-opacity:0.05}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#11767a}
+.dm0{stop-opacity:0.22}.dm1{stop-opacity:0.18}.dm2{stop-opacity:0.13}.dm3{stop-opacity:0.04}
+.dme0{stop-opacity:0.62}.dme1{stop-opacity:0.55}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.07}.da1{stop-opacity:0.10}.da2{stop-opacity:0.30}.da3{stop-opacity:0.46}.da4{stop-opacity:0.40}
+.dae0{stop-opacity:0.34}.dae1{stop-opacity:0.46}.dae2{stop-opacity:0.88}.dae3{stop-opacity:0.84}
+.apath{fill:none;stroke:#11767a;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.adot{fill:#11767a}
+.start{fill:#1a1714}
+.goal{fill:none;stroke:#1a1714;stroke-width:1.4}
+.goaldot{fill:#1a1714}
+.t{font:14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.ti{font:italic 14px 'Century Supra','Century Schoolbook','New Century Schoolbook',Georgia,serif;fill:#564e44}
+.hdot{fill:#d2371f}
+.pick{fill:none;stroke:#d2371f;stroke-width:1.5}
+.aim{fill:none;stroke:#d2371f;stroke-width:1.6;stroke-dasharray:4 4;stroke-linecap:round}
+.aimhead{fill:#d2371f}
+.runs{fill:rgba(26,23,20,0.035);stroke:rgba(26,23,20,0.45);stroke-width:1;stroke-dasharray:3 3}
+@media (prefers-color-scheme: dark){
+.h{fill:#ece3d2}
+.frame,.rule{stroke:rgba(236,227,210,0.28)}
+.hball{fill:#fe5a44;stroke:#fe5a44;fill-opacity:0.14}
+.hpath,.route{stroke:#fe5a44}
+.aball{fill:#3fb8b8;stroke:#3fb8b8;fill-opacity:0.11}
+.df0,.df1,.df2,.df3,.de0,.de1,.de2{stop-color:#3fb8b8}
+.df0{stop-opacity:0.34}.df1{stop-opacity:0.20}.df2{stop-opacity:0.09}
+.de0{stop-opacity:0.76}.de1{stop-opacity:0.42}.de2{stop-opacity:0.06}
+.dm0,.dm1,.dm2,.dm3,.dme0,.dme1,.dme2,.da0,.da1,.da2,.da3,.da4,.dae0,.dae1,.dae2,.dae3{stop-color:#3fb8b8}
+.dm0{stop-opacity:0.24}.dm1{stop-opacity:0.20}.dm2{stop-opacity:0.15}.dm3{stop-opacity:0.05}
+.dme0{stop-opacity:0.58}.dme1{stop-opacity:0.52}.dme2{stop-opacity:0.22}
+.da0{stop-opacity:0.08}.da1{stop-opacity:0.12}.da2{stop-opacity:0.32}.da3{stop-opacity:0.48}.da4{stop-opacity:0.42}
+.dae0{stop-opacity:0.32}.dae1{stop-opacity:0.44}.dae2{stop-opacity:0.85}.dae3{stop-opacity:0.80}
+.apath{stroke:#3fb8b8}
+.adot{fill:#3fb8b8}
+.start,.goaldot{fill:#ece3d2}
+.goal{stroke:#ece3d2}
+.t,.ti{fill:#b0a692}
+.hdot,.aimhead{fill:#fe5a44}
+.pick,.aim{stroke:#fe5a44}
+.runs{fill:rgba(236,227,210,0.04);stroke:rgba(236,227,210,0.42)}
+}
+.wall{fill:#ece8dd;fill-opacity:0.65;stroke:none}
+.fence{fill:none;stroke:#1a1714;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.ckpt{fill:none;stroke:#d2371f;stroke-width:1.55;stroke-linejoin:round}
+.known{fill:none;stroke:#d2371f;stroke-opacity:0.15;stroke-width:18.5;stroke-linecap:round;stroke-linejoin:round}
+.knownbox{fill:#d2371f;fill-opacity:0.15;stroke:none}
+.cbar{fill:#11767a;fill-opacity:0.78;stroke:none}
+.cbarf{fill:#11767a;fill-opacity:0.20;stroke:none}
+.csep{fill:none;stroke:rgba(26,23,20,0.20);stroke-width:1}
+.grule{fill:none;stroke:rgba(26,23,20,0.28);stroke-width:1}
+.clbl{font-family:"Century Supra","Century Schoolbook","New Century Schoolbook",Georgia,serif;font-size:14px;font-style:italic;fill:#564e44}
+@media (prefers-color-scheme: dark){
+.wall{fill:#1e1b15;fill-opacity:0.80}
+.fence{stroke:#ece3d2}
+.ckpt{stroke:#fe5a44}
+.known{stroke:#fe5a44;stroke-opacity:0.19}
+.knownbox{fill:#fe5a44;fill-opacity:0.19}
+.cbar{fill:#3fb8b8;fill-opacity:0.82}
+.cbarf{fill:#3fb8b8;fill-opacity:0.22}
+.csep{stroke:rgba(236,227,210,0.20)}
+.grule{stroke:rgba(236,227,210,0.26)}
+.clbl{fill:#b0a692}
+}
+</style>
+<text class="h" x="360" y="18" text-anchor="middle">raw chat</text>
+<path class="grule" d="M0.5,29.5 V25 H719.5 V29.5"/>
+<g transform="translate(0,33)">
+<path class="runs" d="M472,74 C472.8,76.7 472.2,79.6 470.7,82.3 C469.2,84.9 466.1,87.5 462.8,89.8 C459.6,92.2 455.3,94.3 451.3,96.2 C447.3,98.2 443,100 438.8,101.8 C434.6,103.6 430.4,105.3 426,106.9 C421.5,108.5 417,110.1 412,111.4 C407.1,112.7 401.8,113.9 396.3,114.6 C390.8,115.4 384.9,115.9 379.2,116.1 C373.5,116.3 367.7,116.1 362,116 C356.3,115.8 350.8,115.4 345.2,115.1 C339.5,114.8 334,114.5 328.1,114.2 C322.3,113.8 316.1,113.5 310,112.8 C304,112.1 297.5,111.4 291.8,110.1 C286.2,108.8 280.5,107.1 276.3,105 C272.1,103 268.7,100.4 266.6,97.8 C264.4,95.2 263.8,92.2 263.5,89.5 C263.3,86.7 264.4,83.9 265.2,81.4 C265.9,78.8 267.3,76.4 268,74 C268.8,71.6 269.3,69.4 269.8,67 C270.3,64.6 270.3,62.2 271.1,59.7 C272,57.3 272.8,54.7 274.7,52.2 C276.6,49.8 279.2,47.4 282.5,45.2 C285.9,43.1 290.3,41.2 294.8,39.5 C299.4,37.8 304.8,36.4 310,35.2 C315.3,33.9 320.9,32.9 326.5,31.9 C332.1,31 337.9,30.1 343.8,29.4 C349.7,28.8 355.9,28.1 362,28 C368.1,27.8 374.6,27.9 380.6,28.5 C386.6,29 392.7,30.1 397.9,31.5 C403.1,32.8 407.9,34.7 412,36.6 C416.2,38.5 419.5,40.7 423,42.7 C426.4,44.6 429.2,46.6 432.6,48.5 C436,50.3 439.4,52 443.2,53.8 C447,55.6 451.4,57.3 455.2,59.4 C459,61.4 463.3,63.6 466.1,66.1 C468.9,68.5 471.3,71.3 472,74Z"/>
+<text class="ti" x="378" y="100">runs</text>
+<path class="wall" d="M140,108 L232,76 L248,110 L156,142Z"/>
+<path class="fence" d="M140,108 L232,76 L248,110 L156,142Z"/>
+<defs><radialGradient id="m0f" gradientUnits="userSpaceOnUse" cx="48" cy="142" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m0e" gradientUnits="userSpaceOnUse" cx="48" cy="142" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M64.1,142 L59.5,143.2 L59.7,144.8 L63.3,147.2 L57.4,146.5 L74.6,159.8 L60.4,151.8 L55.7,150 L55.1,150.7 L56.5,155.4 L55.1,156.4 L53.2,156.7 L51,156.4 L49.8,156.8 L47.9,154.2 L46.9,152.3 L44.7,155.7 L42.9,156.8 L41.2,156.5 L40.9,153.4 L41.6,150.1 L39.9,149.9 L37.8,150.1 L38.2,148.3 L38.5,146.5 L37.2,145.9 L35,145 L37,143.4 L37,142 L14.6,139.3 L37.7,139.7 L33.9,136.9 L34.1,135.1 L38.3,135.8 L37,133.1 L36.9,131 L40.7,132.8 L31.8,115.1 L41,128 L43.3,127.8 L44.8,128.3 L46.1,127 L47.8,128.2 L49.3,129.9 L52.7,112.8 L52.9,127.8 L52.6,132.4 L54.6,131.7 L94.5,87.7 L59.3,131.1 L57.5,134.5 L60.1,134.3 L59.7,136.6 L59.9,137.9 L78.1,134.6 L63.6,140.4Z" style="fill:url(#m0f);stroke:url(#m0e)"/>
+<defs><radialGradient id="m1f" gradientUnits="userSpaceOnUse" cx="94.5" cy="87.7" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m1e" gradientUnits="userSpaceOnUse" cx="94.5" cy="87.7" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M125.2,87.9 L106.5,89.3 L105.2,90.1 L108.8,93 L107.6,94.3 L107.4,95.8 L106.2,96.8 L114.4,109.8 L103.2,99 L101.3,98.3 L101.3,102 L98.1,98.2 L97.9,101.8 L96.1,100 L94.4,103.5 L93.1,102.8 L92,98.8 L90.9,97.5 L89.5,98.3 L86.1,101.4 L85.4,99.6 L84.3,98.1 L85.5,95 L84.8,94.1 L82.8,93.3 L81.7,92.1 L80.8,90.7 L83.9,89.1 L79.1,87.9 L82.8,86.2 L80.2,84.8 L61.7,76.6 L83.7,82.3 L81.3,79.6 L85.4,80.6 L85.1,78.2 L84.7,75.6 L86.3,74.8 L88.1,74.6 L86.1,59.7 L91.5,74 L93.2,74.6 L94.7,75.6 L96.5,72.9 L97.5,73.7 L99.6,72.9 L107.7,57.2 L100.6,78.3 L102.1,78.5 L104.9,77.2 L105.8,78.5 L152.9,46.5 L106.1,82.4 L107.6,83.3 L105,85.3 L105.3,86.6Z" style="fill:url(#m1f);stroke:url(#m1e)"/>
+<defs><radialGradient id="m2f" gradientUnits="userSpaceOnUse" cx="152.9" cy="46.5" r="62.5"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m2e" gradientUnits="userSpaceOnUse" cx="152.9" cy="46.5" r="62.5"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M168.9,46.7 L168,48.5 L185.1,54.3 L163.9,50.2 L165,52.3 L163.2,52.8 L162.3,54.3 L162.1,55.4 L161.4,57.2 L160.3,57.9 L168.4,74.7 L156.9,58.8 L155.5,57.9 L154.6,62.3 L152.8,57.7 L151.6,57.6 L150.1,58.7 L149,57.7 L146.4,60.3 L147.5,55.6 L142.9,58.9 L143,56.3 L141.3,55.6 L142.8,52.8 L140.9,52.6 L141.9,50.3 L138.5,50.1 L139.4,47.9 L141.1,46.8 L140.8,45.3 L142.8,44.2 L142.8,42.8 L140.5,40.4 L127.9,30.8 L140.7,36.6 L144.1,37.9 L145.1,36.9 L145.3,34.5 L147.3,34.5 L147.8,32.4 L150.3,35.3 L151.4,34 L150.8,11.6 L154.2,34.5 L156.1,32.4 L157.1,34.2 L158.6,34.5 L160.9,33.4 L173.2,19.3 L162.7,36.9 L165.6,36.2 L163,40.2 L214,22 L164.7,42.7 L165,44 L169.1,44.5Z" style="fill:url(#m2f);stroke:url(#m2e)"/>
+<defs><radialGradient id="m3f" gradientUnits="userSpaceOnUse" cx="214" cy="22" r="79.2"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m3e" gradientUnits="userSpaceOnUse" cx="214" cy="22" r="79.2"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M246.7,21.3 L225.7,23.1 L228.3,25.5 L224.6,25.7 L228.3,28.7 L286,64 L225.6,31.5 L225.7,33.3 L223.9,34.8 L222.5,35.2 L226.7,50.2 L218.1,33.8 L216.2,32.8 L215.7,34.7 L214.1,37.5 L212,37.2 L211.2,35.4 L210,33.6 L201.3,51.5 L206.4,34.1 L206.3,31.5 L205,31.1 L205.8,28.6 L201.1,30.2 L203.9,26.9 L203.1,25.7 L201.2,24.7 L203,23.2 L201.4,22.1 L198.4,19.9 L200.9,19.1 L204.2,18.5 L202,16.1 L201.7,14.2 L201.6,12.3 L203.8,11.9 L204,9.2 L206.3,9.3 L208.3,9.6 L209,7.9 L210.6,6.6 L212.4,6 L213.9,10.5 L216,6.3 L217.1,8.8 L218.8,7.9 L220.1,8.8 L220.1,12.5 L222.2,11.3 L221.5,14.7 L232.2,6 L223.9,16 L223.5,17.2 L226.7,17.3 L227.3,19.2 L224.6,20.9Z" style="fill:url(#m3f);stroke:url(#m3e)"/>
+<defs><radialGradient id="m4f" gradientUnits="userSpaceOnUse" cx="286" cy="64" r="78.5"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m4e" gradientUnits="userSpaceOnUse" cx="286" cy="64" r="78.5"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M299.8,63.9 L316,65.8 L297.2,66.7 L299.6,68.9 L298.7,70 L298,71.8 L297.3,73.4 L294.4,72.4 L307.1,90 L292.5,74.1 L292.6,77.1 L289.4,74 L288.8,77 L287.3,75.1 L286.1,75.8 L284.5,76.5 L283.2,77.6 L281.1,77.9 L280,76.7 L279.8,74.2 L277,75.1 L278.5,71.3 L277.1,71.2 L272.5,72.3 L276.8,68.6 L275.1,67.6 L275.9,66.3 L273,65.3 L272.1,63.7 L270.2,62.3 L274.8,61.4 L256.6,52.2 L276.5,59.4 L276.4,57.9 L276.9,56.8 L277,55.1 L277,52.8 L279.3,53.5 L281.1,54.2 L281,49.9 L278.8,34.5 L284.7,51.3 L285.8,52.3 L287.7,49.7 L288.6,51.9 L290.6,50.6 L300.3,35.1 L292.2,54.2 L295.9,52 L293.4,56.4 L295.1,56.5 L356,20 L300.3,57.2 L299.1,59.2 L297.6,61.2 L298.8,62.5Z" style="fill:url(#m4f);stroke:url(#m4e)"/>
+<defs><radialGradient id="m5f" gradientUnits="userSpaceOnUse" cx="356" cy="20" r="73.4"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="m5e" gradientUnits="userSpaceOnUse" cx="356" cy="20" r="73.4"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M370.9,19.9 L370.8,21.6 L371.5,23.3 L428,48 L368.3,25.9 L369.3,28.4 L367.7,29.4 L364.5,28.4 L364.2,30.3 L372.8,45.7 L362.6,33.3 L361.2,35 L358.3,30.4 L357.6,35.3 L356.1,31.5 L354.1,35.7 L348.1,50.9 L351.7,33.1 L349.6,32.8 L348.1,32.2 L346.2,32.5 L345.6,30.6 L343.9,29.4 L346.2,25.9 L343.4,26.1 L344,24.2 L345.5,22.6 L345.7,21.3 L339.8,19.8 L344.9,18.7 L341.7,17 L340.8,14.8 L342.3,13.3 L346.2,13.9 L344.7,10.8 L348.2,12.1 L347.9,10.2 L350.1,11 L351.6,10.4 L352.7,9.9 L352.3,6 L354.8,9.1 L356.2,6.3 L357.5,6 L359,6 L361.1,6 L360.9,9.9 L361.5,11 L367.6,6 L367.2,9 L365.5,12.5 L369.4,11.4 L368.4,14 L368.8,15.8 L384,14.9 L371.7,18.2Z" style="fill:url(#m5f);stroke:url(#m5e)"/>
+<path class="known" d="M48,142 L94.5,87.7 L152.9,46.5"/>
+<path class="apath" d="M48,142 L94.5,87.7 L152.9,46.5 L214,22 L286,64 L356,20 L428,48"/>
+<circle class="adot" cx="94.5" cy="87.7" r="2.2"/>
+<circle class="adot" cx="152.9" cy="46.5" r="2.2"/>
+<circle class="adot" cx="214" cy="22" r="2.2"/>
+<circle class="adot" cx="286" cy="64" r="2.2"/>
+<circle class="adot" cx="356" cy="20" r="2.2"/>
+<circle class="start" cx="48" cy="142" r="3"/>
+<circle class="goal" cx="428" cy="48" r="7"/>
+<circle class="goaldot" cx="428" cy="48" r="2"/>
+<circle class="hball" cx="63.5" cy="123.9" r="9.3"/>
+<circle class="hball" cx="79" cy="105.8" r="9.3"/>
+<circle class="hball" cx="94.5" cy="87.7" r="9.3"/>
+<circle class="hball" cx="114" cy="74" r="9.3"/>
+<circle class="hball" cx="133.5" cy="60.3" r="9.3"/>
+<circle class="hball" cx="152.9" cy="46.5" r="9.3"/>
+<circle class="hdot" cx="63.5" cy="123.9" r="1.8"/>
+<circle class="hdot" cx="79" cy="105.8" r="1.8"/>
+<circle class="hdot" cx="114" cy="74" r="1.8"/>
+<circle class="hdot" cx="133.5" cy="60.3" r="1.8"/>
+<rect class="frame" x="0.5" y="0.5" width="483" height="171" rx="4"/>
+</g>
+<g transform="translate(508,33)">
+<defs><clipPath id="cclip1"><rect x="1" y="24" width="210" height="147.5"/></clipPath></defs>
+<text class="clbl" x="106" y="16.5" text-anchor="middle">the agent’s messages</text>
+<line class="csep" x1="0.5" y1="24" x2="211.5" y2="24"/>
+<g clip-path="url(#cclip1)">
+<rect class="knownbox" x="10" y="27.3" width="192" height="50.4" rx="5"/>
+<rect class="cbar" x="18" y="30.5" width="138" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="35.1" width="166" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="39.8" width="112" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="44.5" width="154" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="49.1" width="96" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="57.5" width="152" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="62.1" width="118" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="66.8" width="168" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="71.5" width="130" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="79.9" width="162" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="84.5" width="128" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="89.2" width="172" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="93.8" width="104" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="98.5" width="146" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="106.9" width="144" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="111.5" width="168" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="116.2" width="116" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="120.8" width="156" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="129.2" width="158" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="133.9" width="110" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="138.5" width="164" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="143.2" width="136" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="147.8" width="122" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="156.2" width="170" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="160.9" width="132" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="165.5" width="154" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="170.2" width="118" height="3" rx="1.5"/>
+<rect class="cbar" x="18" y="174.8" width="142" height="3" rx="1.5"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="211" height="171" rx="4"/>
+</g>
+<text class="h" x="360" y="231" text-anchor="middle">checkpoints the agent reports</text>
+<path class="grule" d="M0.5,242.5 V238 H719.5 V242.5"/>
+<g transform="translate(0,246)">
+<path class="runs" d="M472,74 C472.8,76.7 472.2,79.6 470.7,82.3 C469.2,84.9 466.1,87.5 462.8,89.8 C459.6,92.2 455.3,94.3 451.3,96.2 C447.3,98.2 443,100 438.8,101.8 C434.6,103.6 430.4,105.3 426,106.9 C421.5,108.5 417,110.1 412,111.4 C407.1,112.7 401.8,113.9 396.3,114.6 C390.8,115.4 384.9,115.9 379.2,116.1 C373.5,116.3 367.7,116.1 362,116 C356.3,115.8 350.8,115.4 345.2,115.1 C339.5,114.8 334,114.5 328.1,114.2 C322.3,113.8 316.1,113.5 310,112.8 C304,112.1 297.5,111.4 291.8,110.1 C286.2,108.8 280.5,107.1 276.3,105 C272.1,103 268.7,100.4 266.6,97.8 C264.4,95.2 263.8,92.2 263.5,89.5 C263.3,86.7 264.4,83.9 265.2,81.4 C265.9,78.8 267.3,76.4 268,74 C268.8,71.6 269.3,69.4 269.8,67 C270.3,64.6 270.3,62.2 271.1,59.7 C272,57.3 272.8,54.7 274.7,52.2 C276.6,49.8 279.2,47.4 282.5,45.2 C285.9,43.1 290.3,41.2 294.8,39.5 C299.4,37.8 304.8,36.4 310,35.2 C315.3,33.9 320.9,32.9 326.5,31.9 C332.1,31 337.9,30.1 343.8,29.4 C349.7,28.8 355.9,28.1 362,28 C368.1,27.8 374.6,27.9 380.6,28.5 C386.6,29 392.7,30.1 397.9,31.5 C403.1,32.8 407.9,34.7 412,36.6 C416.2,38.5 419.5,40.7 423,42.7 C426.4,44.6 429.2,46.6 432.6,48.5 C436,50.3 439.4,52 443.2,53.8 C447,55.6 451.4,57.3 455.2,59.4 C459,61.4 463.3,63.6 466.1,66.1 C468.9,68.5 471.3,71.3 472,74Z"/>
+<text class="ti" x="378" y="100">runs</text>
+<path class="wall" d="M140,108 L232,76 L248,110 L156,142Z"/>
+<path class="fence" d="M140,108 L232,76 L248,110 L156,142Z"/>
+<defs><radialGradient id="s0f" gradientUnits="userSpaceOnUse" cx="48" cy="142" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s0e" gradientUnits="userSpaceOnUse" cx="48" cy="142" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M62.1,141.7 L61.5,143.3 L62,145.1 L58.2,145.7 L58.4,146.8 L76.1,160.7 L59,150.6 L58.2,152.4 L54.9,150.4 L54.7,152.8 L54.8,156.3 L52.9,155.4 L51.6,157.9 L49.3,153.4 L48,155.1 L46,157 L45.3,154.7 L43.3,156.3 L41.8,154.2 L42.2,151.4 L41.3,150.6 L36.6,153.6 L39.4,148.9 L38.2,147.9 L36.9,147.5 L34.3,147 L32.9,145.4 L34.9,143.5 L34.7,141.8 L13.4,139.2 L36.3,139.4 L36.1,138 L35.5,135.8 L36.2,134.2 L39.6,135.6 L40.3,134.2 L41.2,133.2 L32.2,115.7 L41.6,129 L42.8,126.7 L44.8,127.4 L46.5,130.2 L48.1,127.1 L49.6,126.3 L52.7,112.6 L51.4,132.2 L53.4,130.6 L54.4,131.8 L94.5,87.7 L55.6,134.6 L56.8,135.3 L61.3,134 L57.7,137.6 L61.3,137.5 L79,134.4 L59.4,140.6Z" style="fill:url(#s0f);stroke:url(#s0e)"/>
+<defs><radialGradient id="s1f" gradientUnits="userSpaceOnUse" cx="94.5" cy="87.7" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s1e" gradientUnits="userSpaceOnUse" cx="94.5" cy="87.7" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M128.5,87.9 L104.8,89 L104.6,90 L106.4,91.9 L107.9,94.3 L104.8,94.2 L106.8,97.7 L104.3,97.5 L115.3,110.7 L102.7,100.3 L99.5,98.4 L99,101 L97.7,102.8 L95.9,101.2 L94.5,100 L93.4,98.6 L91.3,101.1 L90.9,98.6 L89.1,99.1 L87.5,99.3 L84.6,100.3 L84.4,98 L84,96.1 L81.3,95.9 L83.5,93 L82.6,92 L80.5,90.8 L80.9,89.1 L82.9,87.6 L81.8,86.5 L79.6,84.3 L62.6,76.9 L81.3,81.5 L85.5,82.2 L82.1,77.6 L84.3,77.6 L86.8,78.2 L86.1,73.9 L87.9,74.1 L84.3,53.9 L91.8,76.2 L93,74.5 L94.7,71.4 L95.7,76.6 L97,77.4 L98.4,76.1 L108.3,55.8 L101.4,76.9 L103,77.1 L103.7,78.6 L152.9,46.5 L103.3,82.1 L108.1,81 L106.7,83.2 L107.4,84.8 L107.6,86.1Z" style="fill:url(#s1f);stroke:url(#s1e)"/>
+<defs><radialGradient id="s2f" gradientUnits="userSpaceOnUse" cx="152.9" cy="46.5" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s2e" gradientUnits="userSpaceOnUse" cx="152.9" cy="46.5" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M165.4,46.4 L167.4,47.9 L182.6,54.2 L163.1,49.9 L165.5,52.6 L163.2,53.2 L165.1,56.1 L162.6,56.1 L162.3,58.2 L158.6,56 L166.8,72.8 L157.4,59.8 L156.7,61.5 L154.5,62.1 L153,60.2 L151.4,60.3 L149.4,61.1 L148.9,57.7 L146.8,58.7 L144.8,59.2 L144.1,57.3 L143.4,56.2 L140.8,56.2 L139.1,55 L142.2,51.7 L142.8,50.2 L139.3,49.6 L141.8,47.6 L136.8,46.3 L139.8,45.3 L139.7,43.6 L138.5,41.7 L138.9,39.9 L128.7,30.8 L142.7,38.4 L144.8,38.5 L144.7,36.4 L147,37.1 L146.3,32.4 L148.7,34.8 L150,34.2 L151,30.9 L151.3,11.2 L154.5,34.3 L155.7,33.5 L157.8,33.1 L157.7,36.1 L159,37.2 L173.2,20.1 L161,38.6 L164.3,37.4 L165.3,38.5 L165.3,40.3 L219.7,20.9 L168,43.1 L167.9,44.8Z" style="fill:url(#s2f);stroke:url(#s2e)"/>
+<defs><radialGradient id="s3f" gradientUnits="userSpaceOnUse" cx="219.7" cy="20.9" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s3e" gradientUnits="userSpaceOnUse" cx="219.7" cy="20.9" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M232.6,20.7 L233.3,22.6 L235.4,24.8 L229.7,24.4 L231.6,26.5 L249.1,37.1 L231.6,30.3 L231.1,32.2 L228.1,31.1 L225.5,30 L225.5,33.5 L224.5,33.9 L227.3,52.2 L221.3,35.8 L219.9,34 L218.4,34.5 L216.6,35.5 L216.4,30.9 L214.4,31.4 L211.8,33.1 L209.5,33.5 L208.2,32.1 L210.3,28.5 L206.1,29.7 L208.8,26 L207.3,25.2 L208.6,23.2 L205.8,22.6 L207,21 L205.3,19.2 L204.1,17.1 L209.2,17.4 L206.8,14.8 L207.7,13.7 L210.3,13.4 L205.8,6 L209.8,8.5 L211.8,8.8 L213.7,8.2 L216.1,10.6 L216,6 L218.5,8.3 L219.8,7.8 L221.2,7.3 L222.7,6 L224.7,6 L225.4,9.1 L227.3,8.7 L228.9,9.1 L230.9,9.8 L238.6,6 L230.3,14.5 L234.3,14.2 L232.9,16.3 L231.9,18.2 L290.7,12.5Z" style="fill:url(#s3f);stroke:url(#s3e)"/>
+<defs><radialGradient id="s4f" gradientUnits="userSpaceOnUse" cx="290.7" cy="12.5" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s4e" gradientUnits="userSpaceOnUse" cx="290.7" cy="12.5" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M303.1,12.4 L361.5,21.7 L301,14.7 L302.4,16.7 L304.8,19.5 L303.6,20.5 L299.8,20 L313.7,33.9 L299.9,24.1 L296.9,22.1 L296.2,23.6 L295.2,25.5 L293.4,23.6 L292.7,28.1 L290.4,46.3 L289,28 L287.3,26.4 L286.6,24.5 L285.6,23.4 L282.2,25.5 L281.4,23.8 L282.3,20.5 L281.2,20.3 L281.5,18.4 L278,18.6 L278.4,16.5 L278.7,15.2 L276.2,13.9 L278.8,12.6 L279.6,11.2 L275.9,9 L275.8,7.5 L277.3,6 L280.7,6 L282.8,6 L284.3,6 L285.6,6 L287.1,6 L287.6,6 L288.3,6 L289.1,6 L289.8,6 L290.8,6 L291.4,6 L292.2,6 L293,6 L293.8,6 L294.7,6 L295.8,6 L296.9,6 L298.6,6 L300.8,6 L305.1,6 L305.1,7.5 L302.5,9.8 L306.4,10.6Z" style="fill:url(#s4f);stroke:url(#s4e)"/>
+<defs><radialGradient id="s5f" gradientUnits="userSpaceOnUse" cx="361.5" cy="21.7" r="67.9"><stop offset="0" class="da0"/><stop offset="0.24" class="da1"/><stop offset="0.44" class="da2"/><stop offset="0.70" class="da3"/><stop offset="1" class="da4"/></radialGradient><radialGradient id="s5e" gradientUnits="userSpaceOnUse" cx="361.5" cy="21.7" r="67.9"><stop offset="0" class="dae0"/><stop offset="0.26" class="dae1"/><stop offset="0.52" class="dae2"/><stop offset="1" class="dae3"/></radialGradient></defs>
+<path class="adens" d="M376.8,21.4 L376,23.1 L374.6,24.7 L428,48 L371.8,26.6 L373.9,29.6 L372,30 L369.3,29.5 L368.4,30.4 L378.4,47.8 L366.7,31.9 L366.3,35.9 L364.4,34.6 L362.8,32.2 L361.8,35 L360,37.4 L352.5,56.1 L357.5,33.1 L355.6,33.5 L354.9,32.3 L354.3,30.9 L351.6,31.9 L353.2,28 L350.4,28.7 L347.3,28.7 L347.4,26.4 L347.6,24.9 L346.3,23.1 L345.5,21.7 L349.7,20.5 L345.9,18.3 L346.6,16.8 L349.6,15.8 L352.1,15.8 L351,13.1 L352.3,12.1 L351.3,9 L355.3,11.7 L355.3,8.4 L356.7,7.6 L357.5,6 L360,9.7 L361.4,6 L362.6,9.9 L365.1,6.6 L366.8,6.9 L367.5,9.6 L367.2,12.7 L374.7,6 L369.1,14.1 L370.6,14.7 L372.1,15.1 L374,15.8 L375.9,16.7 L371.9,19.2 L389.6,16.8Z" style="fill:url(#s5f);stroke:url(#s5e)"/>
+<path class="known" d="M48,142 C55.8,133 77,103.6 94.5,87.7 C112,71.8 132.1,57.7 152.9,46.5 C173.8,35.4 196.7,26.6 219.7,20.9 C242.6,15.2 267,12.3 290.7,12.5 C314.3,12.6 338.6,15.8 361.5,21.7 C384.4,27.6 416.9,43.6 428,48"/>
+<path class="apath" d="M48,142 L94.5,87.7 L152.9,46.5 L219.7,20.9 L290.7,12.5 L361.5,21.7 L428,48"/>
+<circle class="adot" cx="94.5" cy="87.7" r="2.2"/>
+<circle class="adot" cx="152.9" cy="46.5" r="2.2"/>
+<circle class="adot" cx="219.7" cy="20.9" r="2.2"/>
+<circle class="adot" cx="290.7" cy="12.5" r="2.2"/>
+<circle class="adot" cx="361.5" cy="21.7" r="2.2"/>
+<circle class="start" cx="48" cy="142" r="3"/>
+<circle class="goal" cx="428" cy="48" r="7"/>
+<circle class="goaldot" cx="428" cy="48" r="2"/>
+<circle class="hball" cx="152.9" cy="46.5" r="9.3"/>
+<circle class="hball" cx="290.7" cy="12.5" r="9.3"/>
+<circle class="hball" cx="428" cy="48" r="9.3"/>
+<rect class="ckpt" x="149.1" y="42.7" width="7.6" height="7.6" rx="1.2"/>
+<rect class="ckpt" x="286.9" y="8.7" width="7.6" height="7.6" rx="1.2"/>
+<rect class="ckpt" x="424.2" y="44.2" width="7.6" height="7.6" rx="1.2"/>
+<rect class="frame" x="0.5" y="0.5" width="483" height="171" rx="4"/>
+</g>
+<g transform="translate(508,246)">
+<defs><clipPath id="cclip2"><rect x="1" y="24" width="210" height="147.5"/></clipPath></defs>
+<text class="clbl" x="106" y="16.5" text-anchor="middle">the agent’s messages</text>
+<line class="csep" x1="0.5" y1="24" x2="211.5" y2="24"/>
+<g clip-path="url(#cclip2)">
+<rect class="cbarf" x="18" y="29.5" width="138" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="32.5" width="166" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="35.5" width="112" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="41.7" width="152" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="44.7" width="118" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="47.7" width="168" height="2" rx="1.0"/>
+<rect class="knownbox" x="10" y="52.5" width="192" height="13" rx="4.5"/>
+<rect class="ckpt" x="18.2" y="55.4" width="7.2" height="7.2" rx="1.2"/>
+<rect class="cbar" x="30.3" y="57.3" width="136" height="3.4" rx="1.7"/>
+<rect class="cbarf" x="18" y="69.3" width="162" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="72.3" width="128" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="75.3" width="172" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="81.5" width="144" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="84.5" width="168" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="87.5" width="116" height="2" rx="1.0"/>
+<rect class="knownbox" x="10" y="92.3" width="192" height="13" rx="4.5"/>
+<rect class="ckpt" x="18.2" y="95.2" width="7.2" height="7.2" rx="1.2"/>
+<rect class="cbar" x="30.3" y="97.1" width="148" height="3.4" rx="1.7"/>
+<rect class="cbarf" x="18" y="109.1" width="158" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="112.1" width="110" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="115.1" width="164" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="121.3" width="170" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="124.3" width="132" height="2" rx="1.0"/>
+<rect class="cbarf" x="18" y="127.3" width="154" height="2" rx="1.0"/>
+<rect class="knownbox" x="10" y="132.1" width="192" height="13" rx="4.5"/>
+<rect class="ckpt" x="18.2" y="135" width="7.2" height="7.2" rx="1.2"/>
+<rect class="cbar" x="30.3" y="136.9" width="128" height="3.4" rx="1.7"/>
+</g>
+<rect class="frame" x="0.5" y="0.5" width="211" height="171" rx="4"/>
+</g>
+</svg>
