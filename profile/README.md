@@ -43,11 +43,64 @@ We’re also interested in the idea that we might teach agents “the game” (c
 
 ### Agents are programmable search processes
 
-Programming with agents involves programming a search process. Inside the large space of software that runs sits a region (our region of concern in this project), 
-let's call it "good software": this is software aligned with very human concerns (performance, compositional design, programmability, and so on). If you don't
-care about this, that's fine, but we do (people care about a lot of weird things), so we're going to talk about it.
+Programming with agents involves programming a search process. 
 
-Our question is simple -- how do we program the agent search process to find / prefer this space?
+Inside the large space of software that runs sits a region (our region of concern in this project), 
+let's call it "good software": this is software aligned with very human concerns (performance, compositional design, programmability, scalability, and so on). 
+If you don't care about this, that's fine, but we do (people care about a lot of weird things), so we're going to talk about it.
+
+Our question is simple: how do we program the agent search process to find / prefer this space?
+The very general idea (that nearly everyone who uses agents is pursuing) 
+is to somehow apply pressure on the agents through as many signals as possible
+to try and increase the probability of finding this space for their concerns.
+
+These signals include: humans-in-the-loop, testing, verification, programming languages with
+guarantees, skills, etc. These are all the techniques 
+that we're pulling out to try and steer the agentic probability distribution.
+
+When this pressure is applied successfully and the data is made available to them, 
+labs can then amortize the successful traces 
+back into the models, making them better at software (or whatever they can get their hands on).
+
+### Amortization gap
+
+A question arises: if this process continues for long enough, will software be "solved"?
+
+Our hypothesis is that no, software is not solved, and it seems like
+where you fall on this question seems to align with whether or not you believe that 
+our current trend of AI will lead to general purpose pre-trained systems 
+that ultimately understand all of your concerns better
+than you do (let's call this _the machine god hypothesis_).
+
+A machine god might understand your desires and concerns, and can then construct good software (or whatever)
+to answer them ... okay, aren't we already there? We'd say: there are _definitely_ desires and concerns for which
+one can get nearly perfect software out of today's AI systems.
+
+But here's the rub: if you're pushing the frontier, you start move off the "good software" distribution of today's agents,
+and then you increasingly find yourself engineering the search process towards your concerns. 
+This is an _amortization gap_: the pre-training process leads
+to a search process for your concerns, but you find that you can improve it.
+
+(pre-training here means _before usage_ -- it encompasses generative pretraining, SFT, RL, etc)
+
+A big theoretical question here seems to be something like "is there an RL curriculum that leads to superhuman performance
+in all possible concerns" or something like that. A related question: suppose that humans (and human organizations)
+continue to find and engineer away these gaps -- can training processes for LLMs continue 
+to compress all these improvements back into the model, for the rest of time?
+
+Not sure, but it seems like the space of software is infinite, and as we use these tools
+to more rapidly explore the space, it seems like a fundamental geometric observation that these
+amortization gaps cannot be eliminated via any form of pre-training. The alternative seems like wishful thinking ...
+that indeed -- there exists some training process that produces an artifact that "solves software"
+seems like it might only be true
+in an narrow economically interpreted definition of "software", which we're not really interested in
+(after all, we're boundary pushers).
+
+In other words, we're not sure that amortization gaps are ever going away ... and with that in mind,
+it behooves us (as human designers and programmers) _to continue to find these gaps_, analogous
+(of course) the pursuit of knowledge in the first place.
+
+---
 
 A human programmer searches in small steps. An agent (a language model working in a loop with tools) takes longer (and more frequent!) steps, which we call _leaps_. 
 At any point in the search, the agent has many possible next steps, some more likely than others. 
@@ -57,7 +110,9 @@ We draw this _distribution of next steps_ as a jagged teal ball, and each leap a
   <img src="figures/search.svg" alt="A human searches in small steps. A language model agent leaps into software that runs, outside good software. A human at the helm keeps its path smooth only for the leaps they can read" width="720" />
 </p>
 
-_On its own (center), the agent (teal) often ends in software that runs (dashed region), but perhaps not inside the ring of good software. A human (red) has a budget of six small steps, and reading one leap costs three. At the helm (right), the human reads the first two leaps. At each, the human accepts the draw that keeps the path's direction (red rings) over a longer one that turns away. Past the second leap, the path turns sharply and zigzags._
+_On its own (center), the agent (teal) often ends in software that runs (dashed region), but (today!) perhaps not inside the ring of good software. 
+A human (red) has a budget of six small steps, and reading one leap costs three. At the helm (right), the human reads the first two leaps. 
+At each, the human accepts the draw that keeps the path's direction (red rings) over a longer one that turns away. Past the second leap, the path turns sharply and zigzags._
 
 Frontier labs program part of the agent's search into the model's weights, through pretraining, fine-tuning, and reinforcement learning. They train toward software that runs and, 
 using human preference data, toward what people generally want from software. Of course they want good software, and if there was an RL environment that could 
