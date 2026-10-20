@@ -60,7 +60,8 @@ that we're pulling out to try and steer the agentic probability distribution.
 
 When this pressure is applied successfully and the data is made available to them, 
 labs can then amortize the successful traces 
-back into the models, making them better at software (or whatever they can get their hands on).
+back into the models, making them better at software (or whatever they can get their hands on),
+reducing the need for the pressure -- in a sort of virtuous amortization cycle.
 
 ### Amortization gap
 
